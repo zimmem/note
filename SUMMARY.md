@@ -3,7 +3,6 @@
 ## 开发语言与框架
 
 * [Introduction](README.md)
-* [First Chapter](chapter1.md)
 * [java](java.md)
   * [spring](java/spring.md)
     * [spring mvc](java/spring/spring-mvc.md)
@@ -23,10 +22,10 @@
 * [hbase](spring/xxx.md)
   * FastFS
 * zookeeper
-* redis
-* mongodb
-* mysql
-* FastFS
+* [redis](redis.md)
+* [mongodb](mongodb.md)
+* [mysql](mysql.md)
+* [FastFS](fastfs.md)
 * [Sandbox](sandbox.md)
 
 ## 机器学习
