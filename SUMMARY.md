@@ -14,13 +14,17 @@
   * [mybatis](java/mybatis.md)
     * [xx](java/mybatis/xxx.md)
 * [dubbo](dubbo.md)
-* hadoop
+* [hadoop](hadoop.md)
+  * HDFS
+  * MapReduce
 * [hive](spring/README.md)
 * [hbase](spring/xxx.md)
+  * FastFS
 * zookeeper
 * redis
 * mongodb
 * mysql
+* FastFS
 
 ## test
 
