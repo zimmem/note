@@ -7,6 +7,7 @@
 * [java](java.md)
   * [spring](java/spring.md)
     * [spring mvc](java/spring/spring-mvc.md)
+      * [自定义参数解析](java/spring/spring-mvc/zi-ding-yi-can-shu-jie-xi.md)
     * spring data
   * spring security
   * spring boot
@@ -15,7 +16,7 @@
     * [xx](java/mybatis/xxx.md)
 * [dubbo](dubbo.md)
 * [hadoop](hadoop.md)
-  * HDFS
+  * [HDFS](hadoop/hdfs.md)
   * MapReduce
 * [hive](spring/README.md)
 * [hbase](spring/xxx.md)
