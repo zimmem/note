@@ -9,10 +9,7 @@
     "plugins": [
       "alerts",
        "toc",
-       "gitbookcode
-"
-
-       
+       "gitbookcode"
       ],
 
    
