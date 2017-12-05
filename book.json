@@ -8,7 +8,11 @@
    
     "plugins": [
       "alerts",
-       "toc"
+       "toc",
+       "gitbookcode
+"
+
+       
       ],
 
    
