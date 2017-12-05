@@ -6,7 +6,11 @@
     "extension": null,
 
    
-    "plugins": ["alerts", "toc"],
+    "plugins": [
+      "alerts",
+       "toc",
+       "toggle-chapters"
+      ],
 
    
     "pluginsConfig": {

@@ -19,8 +19,8 @@
   * [HDFS](hadoop/hdfs.md)
   * MapReduce
 * [hbase](spring/xxx.md)
-  * FastFS
 * Spark
+* FastFS
 * [hive](spring/README.md)
 * zookeeper
 * [redis](redis.md)
