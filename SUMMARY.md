@@ -14,6 +14,9 @@
   * spring cloud 
   * [mybatis](java/mybatis.md)
     * [xx](java/mybatis/xxx.md)
+* [nodejs](nodejs.md)
+  * npm
+    * [配置 registry 镜像或代理](nodejs/pei-zhiregistry-jing-xiang-huo-dai-li.md)
 * [dubbo](dubbo.md)
 * [hadoop](hadoop.md)
   * [HDFS](hadoop/hdfs.md)
@@ -31,7 +34,7 @@
 * PostgreSQL
 * [FastFS](fastfs.md)
 * Spark
-* [Sandbox](sandbox.md)
+* nodejs
 
 ## 机器学习
 
