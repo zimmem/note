@@ -1,7 +1,5 @@
 # Sandbox
 
-
-
 &lt;!-- toc --&gt;
 
 ## alert
