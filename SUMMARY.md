@@ -39,6 +39,10 @@
 
 ## 运维
 
+* docker
+* kubernetes
+* influxdb
+
 ## 机器学习
 
 
