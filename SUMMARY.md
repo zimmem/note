@@ -42,10 +42,10 @@
 * docker
 * kubernetes
 * influxdb
+* flannel
+* etcd
 
 ## 机器学习
 
-1. tensorflow
-
-
+* tensorflow
 
