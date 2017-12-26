@@ -14,6 +14,9 @@
   * spring cloud 
   * [mybatis](java/mybatis.md)
     * [xx](java/mybatis/xxx.md)
+  * jvm
+    * [print gc log ](java/print-gc-log.md)
+    * [How to use G1 garbage collector](java/how-to-use-g1-garbage-collector.md)
 * [nodejs](nodejs.md)
   * npm
     * [配置 registry 镜像或代理](nodejs/pei-zhiregistry-jing-xiang-huo-dai-li.md)
