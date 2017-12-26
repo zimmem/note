@@ -47,6 +47,8 @@
 * influxdb
 * flannel
 * etcd
+* [linux](yun-wei/linux.md)
+  * Performance diagnosis
 
 ## 机器学习
 
