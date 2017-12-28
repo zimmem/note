@@ -26,6 +26,7 @@
   * MapReduce
 * [hbase](spring/xxx.md)
 * Spark
+* Presto
 * FastFS
 * [hive](spring/README.md)
 * zookeeper
@@ -38,7 +39,7 @@
 * [FastFS](fastfs.md)
 * Spark
 * nodejs
-* [sandbox](sandbox.md)
+* Presto
 
 ## 运维
 
