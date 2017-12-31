@@ -49,7 +49,8 @@
 * flannel
 * etcd
 * [linux](yun-wei/linux.md)
-  * Performance diagnosis
+  * [Performance diagnosis](yun-wei/linux/performance-diagnosis.md)
+  * [Shell Syntax ](yun-wei/linux/shell-syntax.md)
 
 ## 机器学习
 
