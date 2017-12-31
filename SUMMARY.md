@@ -42,7 +42,8 @@
 
 ## 运维
 
-* docker
+* [docker](yun-wei/docker.md)
+  * [安装后免 sudo](yun-wei/docker/an-zhuang-hou-mian-sudo.md)
 * kubernetes
 * influxdb
 * flannel
