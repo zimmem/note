@@ -51,6 +51,7 @@
 * [linux](yun-wei/linux.md)
   * [Performance diagnosis](yun-wei/linux/performance-diagnosis.md)
   * [Shell Syntax ](yun-wei/linux/shell-syntax.md)
+  * [iptables](yun-wei/linux/iptables.md)
 
 ## 机器学习
 
