@@ -61,9 +61,6 @@
     },
     
      "theme-default": {
-      "showLevel": true,
-      "styles": {
-        "website": "build/gitbook.css"
-      }
+      "showLevel": true
     }
 }
