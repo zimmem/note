@@ -10,7 +10,8 @@
       "alerts",
       "expandable-chapters-interactive",
        "toc",
-       "-lunr", "-search", "search-plus-mod"
+       "-lunr", "-search", "search-plus-mod",
+       "page-numbering"
       ],
 
    
@@ -23,6 +24,11 @@
             "theme": "sepia",
             "family": "serif" ,
             "size": 1
+        },
+        "page-numbering": {
+            "skipReadme": false,
+            "chapterFormat": "Chapter #chapno#&nbsp;&nbsp;&nbsp;#title# ||| #chapno#&nbsp;&nbsp;&nbsp;#title#",
+            "forceMultipleParts": false
         }
     },
 
