@@ -39,6 +39,9 @@
 * Spark
 * nodejs
 * [sandbox](sandbox.md)
+* [Big Data Platform ops](big-data-platform-ops.md)
+  * [CDH](big-data-platform-ops/cdh.md)
+    * [Install CDH on Ubuntu 16](big-data-platform-ops/cdh/install-cdh-on-ubuntu-16.md)
 
 ## 运维
 
