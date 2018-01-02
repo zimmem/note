@@ -39,17 +39,25 @@
 * [FastFS](fastfs.md)
 * Spark
 * nodejs
-* Presto
+* [sandbox](sandbox.md)
+* [Big Data Platform ops](big-data-platform-ops.md)
+  * [CDH](big-data-platform-ops/cdh.md)
+    * [Install  Cloudera Manager on Ubuntu 16](big-data-platform-ops/cdh/install-cm-on-ubuntu-16.md)
+  * HDP
+    * [Apache Ambari Installation](big-data-platform-ops/apache-ambari-installation.md)
 
 ## 运维
 
-* docker
+* [docker](yun-wei/docker.md)
+  * [安装后免 sudo](yun-wei/docker/an-zhuang-hou-mian-sudo.md)
 * kubernetes
 * influxdb
 * flannel
 * etcd
 * [linux](yun-wei/linux.md)
-  * Performance diagnosis
+  * [Performance diagnosis](yun-wei/linux/performance-diagnosis.md)
+  * [Shell Syntax ](yun-wei/linux/shell-syntax.md)
+  * [iptables](yun-wei/linux/iptables.md)
 
 ## 机器学习
 
