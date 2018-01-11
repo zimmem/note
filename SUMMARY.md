@@ -21,14 +21,8 @@
   * npm
     * [配置 registry 镜像或代理](nodejs/pei-zhiregistry-jing-xiang-huo-dai-li.md)
 * [dubbo](dubbo.md)
-* [hadoop](hadoop.md)
-  * [HDFS](hadoop/hdfs.md)
-  * MapReduce
-* [hbase](spring/xxx.md)
-* Spark
 * Presto
 * FastFS
-* [hive](spring/README.md)
 * zookeeper
 * [redis](redis.md)
 * [mongodb](mongodb.md)
@@ -37,9 +31,17 @@
     * [导入导出](mysql/chang-yong-cao-zuo/dao-ru-dao-chu.md)
 * PostgreSQL
 * [FastFS](fastfs.md)
-* Spark
 * nodejs
 * [sandbox](sandbox.md)
+
+## 大数据
+
+* [hadoop](hadoop.md)
+  * [HDFS](hadoop/hdfs.md)
+  * MapReduce
+* [hbase](spring/xxx.md)
+* [hive](spring/README.md)
+* [Spark](spark.md)
 * [Big Data Platform ops](big-data-platform-ops.md)
   * [CDH](big-data-platform-ops/cdh.md)
     * [Install  Cloudera Manager on Ubuntu 16](big-data-platform-ops/cdh/install-cm-on-ubuntu-16.md)
@@ -59,6 +61,7 @@
   * [Performance diagnosis](yun-wei/linux/performance-diagnosis.md)
   * [Shell Syntax ](yun-wei/linux/shell-syntax.md)
   * [iptables](yun-wei/linux/iptables.md)
+  * [wget](yun-wei/linux/wget.md)
 
 ## 机器学习
 
