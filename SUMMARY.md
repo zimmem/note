@@ -45,8 +45,10 @@
 * [Big Data Platform ops](big-data-platform-ops.md)
   * [CDH](big-data-platform-ops/cdh.md)
     * [Install  Cloudera Manager on Ubuntu 16](big-data-platform-ops/cdh/install-cm-on-ubuntu-16.md)
+    * [Install cloudera Manager on CentOS 6 ](big-data-platform-ops/cdh/install-cloudera-manager-on-centos-6.md)
     * [extjs dependency by oozie](big-data-platform-ops/cdh/extjs-dependency-by-oozie.md)
-  * HDP
+    * [Create Custom Repository](big-data-platform-ops/cdh/create-custom-repository.md)
+  * [HDP](big-data-platform-ops/hdp.md)
     * [Apache Ambari Installation](big-data-platform-ops/apache-ambari-installation.md)
 
 ## 运维
