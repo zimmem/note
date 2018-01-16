@@ -42,6 +42,7 @@
 * [hbase](spring/xxx.md)
 * [hive](spring/README.md)
 * [Spark](spark.md)
+* [oozie](oozie.md)
 * [Big Data Platform ops](big-data-platform-ops.md)
   * [CDH](big-data-platform-ops/cdh.md)
     * [Install  Cloudera Manager on Ubuntu 16](big-data-platform-ops/cdh/install-cm-on-ubuntu-16.md)
