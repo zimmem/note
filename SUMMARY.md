@@ -33,6 +33,9 @@
 * [FastFS](fastfs.md)
 * nodejs
 * [sandbox](sandbox.md)
+* mysql
+  * [User Manager](user-manager.md)
+  * [Install by YUM](install-by-yum.md)
 
 ## 大数据
 
@@ -48,6 +51,8 @@
     * [Install cloudera Manager on CentOS 6 ](big-data-platform-ops/cdh/install-cloudera-manager-on-centos-6.md)
     * [extjs dependency by oozie](big-data-platform-ops/cdh/extjs-dependency-by-oozie.md)
     * [Create Custom Repository](big-data-platform-ops/cdh/create-custom-repository.md)
+    * [Create Custom Cloudera Add-on Service](big-data-platform-ops/cdh/create-custom-cloudera-add-on-service.md)
+    * [Create Cloudera Manager extensions](big-data-platform-ops/cdh/create-cloudera-manager-extensions.md)
   * [HDP](big-data-platform-ops/hdp.md)
     * [Apache Ambari Installation](big-data-platform-ops/apache-ambari-installation.md)
 
