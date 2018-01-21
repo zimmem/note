@@ -2,10 +2,6 @@
 
 
 
-|  |  |
-| :--- | :--- |
-|  |  |
-
 [The parcel format](https://github.com/cloudera/cm_ext/wiki/The-parcel-format)  
 [The alternatives.json file](https://github.com/cloudera/cm_ext/wiki/The-alternatives.json-file)  
 [The parcel defines script](https://github.com/cloudera/cm_ext/wiki/The-parcel-defines-script)  
