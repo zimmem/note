@@ -22,7 +22,8 @@
     * [配置 registry 镜像或代理](nodejs/pei-zhiregistry-jing-xiang-huo-dai-li.md)
 * [dubbo](dubbo.md)
 * Presto
-* FastFS
+* [FastFS](fastfs.md)
+  * spark dataframe join
 * zookeeper
 * [redis](redis.md)
 * [mongodb](mongodb.md)
