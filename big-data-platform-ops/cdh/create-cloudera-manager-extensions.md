@@ -126,11 +126,11 @@ tar zcvf GPLEXTRAS-5.0.0-gplextras5b2.p0.32-el6.parcel GPLEXTRAS-5.0.0-gplextras
 使用 [make_manifest.py][12] 创建 parcel 描述 文件
 
 ## 安装 parcel （略）
-## 修改 yarn 配置
+## 修改 hdfs配置
 
 路径
-Cloudera Manager -> Yarn Service -> Configuration -> Scope(YARN (MR2 Included) (Service-Wide)) 
-配置项 YARN Service Advanced Configuration Snippet (Safety Valve) for yarn-site.xml
+Cloudera Manager -> HDFS -> Configuration -> Scope(Gateway) 
+配置项 HDFS Client Advanced Configuration Snippet (Safety Valve) for hdfs-site.xml
 内容
 ```xml
     <property>
