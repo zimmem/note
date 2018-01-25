@@ -57,7 +57,9 @@ parcel 文件格式参考[The parcel format][2]， 主要有以下几个文件�
   "provides": [
     "yarn-plugin",
     "mapreduce-plugin",
-    "mapreduce2-plugin"
+    "mapreduce2-plugin",
+    "spark-plugin",
+    "hive-plugin"
   ],
 
   "users": { },
