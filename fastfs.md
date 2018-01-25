@@ -27,7 +27,7 @@ samples
     +---+----+---+---+
     ```
 
-2. join using column
+2. inner join using column
     
     ```
     personDF.join(infoDF, "id").show()
