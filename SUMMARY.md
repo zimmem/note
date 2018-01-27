@@ -37,6 +37,7 @@
 * mysql
   * [User Manager](user-manager.md)
   * [Install by YUM](install-by-yum.md)
+* scala
 
 ## 大数据
 
@@ -60,6 +61,8 @@
     * [Create Cloudera Manager extensions](big-data-platform-ops/cdh/create-cloudera-manager-extensions.md)
   * [HDP](big-data-platform-ops/hdp.md)
     * [Apache Ambari Installation](big-data-platform-ops/apache-ambari-installation.md)
+* [Data Warehouse Modeling](data-warehouse-modeling.md)
+  * [文章摘选](data-warehouse-modeling/wen-zhang-zhai-xuan.md)
 
 ## 运维
 
