@@ -32,7 +32,6 @@
     * [导入导出](mysql/chang-yong-cao-zuo/dao-ru-dao-chu.md)
   * [mysql diff ](mysql/mysql-diff.md)
 * [PostgreSQL](postgresql.md)
-* [FastFS](fastfs.md)
 * nodejs
 * [sandbox](sandbox.md)
 * mysql
