@@ -3,6 +3,8 @@
 ## 开发语言与框架
 
 * [Introduction](README.md)
+  * scala
+  * scala
 * [java](java.md)
   * [spring](java/spring.md)
     * [spring mvc](java/spring/spring-mvc.md)
@@ -21,7 +23,6 @@
   * npm
     * [配置 registry 镜像或代理](nodejs/pei-zhiregistry-jing-xiang-huo-dai-li.md)
 * [dubbo](dubbo.md)
-* Presto
 * [FastFS](fastfs.md)
 * zookeeper
 * [redis](redis.md)
@@ -30,7 +31,7 @@
   * [常用操作](mysql/chang-yong-cao-zuo.md)
     * [导入导出](mysql/chang-yong-cao-zuo/dao-ru-dao-chu.md)
   * [mysql diff ](mysql/mysql-diff.md)
-* PostgreSQL
+* [PostgreSQL](postgresql.md)
 * [FastFS](fastfs.md)
 * nodejs
 * [sandbox](sandbox.md)
@@ -47,6 +48,8 @@
 * [hive](spring/README.md)
 * [Spark](spark.md)
   * [spark dataframe join](spark/spark-dataframe-join.md)
+* Presto
+* Impala
 * [oozie](oozie.md)
 * [Big Data Platform ops](big-data-platform-ops.md)
   * [CDH](big-data-platform-ops/cdh.md)
