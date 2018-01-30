@@ -23,8 +23,9 @@
 * [dubbo](dubbo.md)
 * Presto
 * [FastFS](fastfs.md)
-* zookeeper
 * [redis](redis.md)
+* zookeeper
+  * [Configuration](configuration.md)
 * [mongodb](mongodb.md)
 * [mysql](mysql.md)
   * [常用操作](mysql/chang-yong-cao-zuo.md)
@@ -47,6 +48,7 @@
 * [hive](spring/README.md)
 * [Spark](spark.md)
   * [spark dataframe join](spark/spark-dataframe-join.md)
+  * [spark-shell](spark/spark-shell.md)
 * [oozie](oozie.md)
 * [Big Data Platform ops](big-data-platform-ops.md)
   * [CDH](big-data-platform-ops/cdh.md)
