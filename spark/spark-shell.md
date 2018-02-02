@@ -2,7 +2,7 @@
 
 ## 提高 spark-shell 性能
 
-```shell
+```bash
 spark-shell \
 --conf spark.driver.cores=2 \
 --driver-memory 3G \

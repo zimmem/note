@@ -44,6 +44,8 @@
 * [hadoop](hadoop.md)
   * [HDFS](hadoop/hdfs.md)
   * MapReduce
+  * yarn
+    * [resource configuration](hadoop/resource-configuration.md)
 * [hbase](spring/xxx.md)
 * [hive](spring/README.md)
 * [Spark](spark.md)
