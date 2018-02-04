@@ -51,6 +51,7 @@
 * [Spark](spark.md)
   * [spark dataframe join](spark/spark-dataframe-join.md)
   * [spark-shell](spark/spark-shell.md)
+  * [spark-submit](spark/spark-submit.md)
 * Presto
 * Impala
 * [oozie](oozie.md)
