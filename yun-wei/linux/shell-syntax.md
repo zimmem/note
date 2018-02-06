@@ -1,5 +1,7 @@
 # Shell Syntax
 
+<!--toc-->
+
 ## Var
 
 ### Default value
