@@ -84,3 +84,8 @@
 
 * tensorflow
 
+## 工具
+
+* git
+  * [install latest git version  on centos](gong-ju/install-latest-git-version-on-centos.md)
+
