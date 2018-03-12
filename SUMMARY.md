@@ -65,6 +65,8 @@
     * [Create Cloudera Manager extensions](big-data-platform-ops/cdh/create-cloudera-manager-extensions.md)
   * [HDP](big-data-platform-ops/hdp.md)
     * [Apache Ambari Installation](big-data-platform-ops/apache-ambari-installation.md)
+* [Impala](impala.md)
+  * [Maintenance instructions](impala/maintenance-instructions.md)
 
 ## 运维
 
