@@ -10,8 +10,7 @@
       "alerts",
       "expandable-chapters-interactive",
        "toc",
-       "-lunr", "-search", "search-plus-mod",
-       "github-embed"
+       "-lunr", "-search", "search-plus-mod"
       ],
 
    
@@ -24,10 +23,6 @@
             "theme": "sepia",
             "family": "serif" ,
             "size": 1
-        },
-        "github-embed": {
-            "showLink": true, 
-            "reindent": true
         }
     },
 

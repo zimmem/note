@@ -14,7 +14,50 @@ HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-$SPARK_CONF_DIR/yarn-conf}
 3. 用同样方法查找 oozie 中执行 spark2-submit 没有把上述目录加入 classpath 的原因， 发现oozie 执行脚本是，
 `HADOOP_CONF_DIR` 已被设置为 `/data/yarn/nm/usercache/icarbonx/appcache/application_1521461396754_4654/container_e37_1521461396754_4654_01_000002/oozie-hadoop-conf-1523771262850`， 继续阅读 oozie 相关源码，找到最终原因， 相关代码如下
 
-{% github_embed "https://github.com/apache/oozie/blob/release-4.3.1/sharelib/oozie/src/main/java/org/apache/oozie/action/hadoop/ShellMain.java#L140-L156" %}{% endgithub_embed %}
+```java
+//https://github.com/apache/oozie/blob/release-4.3.1/sharelib/oozie/src/main/java/org/apache/oozie/action/hadoop/ShellMain.java
+public class ShellMain extends LauncherMain {
+
+ private void prepareHadoopConfigs(Configuration actionConf, Map<String, String> envp, File currDir) throws IOException {
+        if (actionConf.getBoolean(CONF_OOZIE_SHELL_SETUP_HADOOP_CONF_DIR, false)) {
+            String actionXml = envp.get(OOZIE_ACTION_CONF_XML);
+            if (actionXml != null) {
+                File confDir = new File(currDir, "oozie-hadoop-conf-" + System.currentTimeMillis());
+                writeHadoopConfig(actionXml, confDir);
+                if (actionConf.getBoolean(CONF_OOZIE_SHELL_SETUP_HADOOP_CONF_DIR_WRITE_LOG4J_PROPERTIES, true)) {
+                    System.out.println("Writing " + LOG4J_PROPERTIES + " to " + confDir);
+                    writeLoggerProperties(actionConf, confDir);
+                }
+                System.out.println("Setting " + HADOOP_CONF_DIR + " and " + YARN_CONF_DIR
+                    + " to " + confDir.getAbsolutePath());
+                envp.put(HADOOP_CONF_DIR, confDir.getAbsolutePath());
+                envp.put(YARN_CONF_DIR, confDir.getAbsolutePath());
+            }
+        }
+    }
 
 
-{% github_embed "https://github.com/apache/oozie/blob/release-4.3.1/sharelib/oozie/src/main/java/org/apache/oozie/action/hadoop/LauncherMain.java#L48-L283", hideLines=['50-58', '62-272', '7-10'] %}{% endgithub_embed %}
+}
+```
+
+```java
+//https://github.com/apache/oozie/blob/release-4.3.1/sharelib/oozie/src/main/java/org/apache/oozie/action/hadoop/LauncherMain.java
+
+public abstract class LauncherMain {
+
+     protected static String[] HADOOP_SITE_FILES = new String[]
+            {"core-site.xml", "hdfs-site.xml", "mapred-site.xml", "yarn-site.xml"};
+            
+     protected void writeHadoopConfig(String actionXml, File basrDir) throws IOException {
+        File actionXmlFile = new File(actionXml);
+        System.out.println("Copying " + actionXml + " to " + basrDir + "/" + Arrays.toString(HADOOP_SITE_FILES));
+        basrDir.mkdirs();
+        File[] dstFiles = new File[HADOOP_SITE_FILES.length];
+        for (int i = 0; i < dstFiles.length; i++) {
+            dstFiles[i] = new File(basrDir, HADOOP_SITE_FILES[i]);
+        }
+        copyFileMultiplex(actionXmlFile, dstFiles);
+    }
+}
+
+```
