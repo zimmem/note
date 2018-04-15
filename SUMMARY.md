@@ -66,6 +66,7 @@
     * [Create Custom Repository](big-data-platform-ops/cdh/create-custom-repository.md)
     * [Create Custom Cloudera Add-on Service](big-data-platform-ops/cdh/create-custom-cloudera-add-on-service.md)
     * [Create Cloudera Manager extensions](big-data-platform-ops/cdh/create-cloudera-manager-extensions.md)
+    * [Read/Write hive table when running spark2 by oozie](big-data-platform-ops/cdh/readwrite-hive-table-when-running-spark2-by-oozie.md)
   * [HDP](big-data-platform-ops/hdp.md)
     * [Apache Ambari Installation](big-data-platform-ops/apache-ambari-installation.md)
 * [Impala](impala.md)
