@@ -90,6 +90,12 @@
 
 * tensorflow
 
+## 区块链
+
+* 超级帐本(hyperledger-fabric)
+  * [概念](hyperledger-fabric/concept.md)
+  * [在 kubernetes 集群上搭建 hyperledger-fabric 开发环境](hyperledger-fabric/deploy-fabric-on-kubernetes.md)
+
 ## 工具
 
 * git
