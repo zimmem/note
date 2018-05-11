@@ -262,8 +262,8 @@ General:
     GenesisMethod: provisional
     GenesisProfile: TwoOrgsOrdererGenesis
     GenesisFile: orderer.genesis.block
-    LocalMSPDir: msp
-    LocalMSPID: DEFAULT
+    LocalMSPDir: /etc/hyperledger/fabric/msp
+    LocalMSPID: OrdererMSP
     Profile:
         Enabled: false
         Address: 0.0.0.0:6060
@@ -311,8 +311,7 @@ Debug:
     DeliverTraceDir:
 ```
 
-hyperledger/fabric-orderer
-
+在 k8s 上创建 orderer  的 service 及 deployment
 
 ```yaml
 apiVersion: v1
@@ -359,7 +358,7 @@ spec:
         - name: ORDERER_GENERAL_TLS_ENABLED
           value: "true"
         - name: ORDERER_GENERAL_TLS_ROOTCAS
-          value: "[/etc/hyperledger/fabric/tls/ca.crt,/etc/hyperledger/fabric/crypto-config/peerOrganizations/fabric-org-1/ca/ca.fabric-org-1-cert.pem,/etc/hyperledger/fabric/crypto-config/peerOrganizations/fabric-org-2/ca/ca.fabric-org-2-cert.pem]"
+          value: "[/etc/hyperledger/fabric/tls/ca.crt]"
         - name: ORDERER_GENERAL_LOCALMSPID
           value: OrdererMSP
         - name: ORDERER_GENERAL_LOCALMSPDIR
@@ -546,9 +545,14 @@ peer channel update -o orderer.fabric-orderer:7050 \
 
 ## 测试网络
 
+进入 fabric-tools pod 的控制台
+
+```
+kubectl exec -it fabric-tools-xxx bash
+```
+
+
 ```bash
-
-
 export CORE_PEER_LOCALMSPID="Org1MSP" 
 export CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/crypto-config/peerOrganizations/fabric-org-1/users/Admin@fabric-org-1/msp 
 export CORE_PEER_ADDRESS=peer0.fabric-org-1:7051
