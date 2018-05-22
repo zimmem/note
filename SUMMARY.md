@@ -86,9 +86,11 @@
   * [iptables](yun-wei/linux/iptables.md)
   * [wget](yun-wei/linux/wget.md)
 
-## 机器学习
+## 机器学习与数据挖掘
 
 * tensorflow
+* Top 10 data mining algorithm
+  * [C4.5](top-10-data-mining-algorithm/C4.5.md)
 
 ## 区块链
 
