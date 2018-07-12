@@ -4,7 +4,7 @@ const { promisify } = require('util');
 
 var summary = "# SUMMARY\n";
 
-var ignore = new Set([".git", ".vscode", "style"]);
+var ignore = new Set([".git", ".vscode", "styles"]);
 
 var directory = path.resolve(".") + '/'
 

@@ -12,7 +12,6 @@
     * [Install Cloudera Manager on Ubuntu 16](big-data-platform-ops/cdh/install-cm-on-ubuntu-16.md)
     * [Read/Write hive table when running spark2 by oozie](big-data-platform-ops/cdh/readwrite-hive-table-when-running-spark2-by-oozie.md)
 * hadoop
-    * [README.md](big-data-platform-ops/hadoop/README.md)
     * [hdfs.md](big-data-platform-ops/hadoop/hdfs.md)
     * [Resource Configuration](big-data-platform-ops/hadoop/resource-configuration.md)
 * hbase
@@ -86,16 +85,12 @@
     * [README.md](langue-and-frameworks/dubbo/README.md)
 * java
     * mybatis
-        * [# generator](langue-and-frameworks/java/mybatis/xx.md)
-        * [xxx.md](langue-and-frameworks/java/mybatis/xxx.md)
     * spring
         * spring-mvc
             * [扩展点](langue-and-frameworks/java/spring/spring-mvc/zi-ding-yi-can-shu-jie-xi.md)
         * [常用扩展](langue-and-frameworks/java/spring/chang-yong-kuo-zhan.md)
         * [Srping MVC](langue-and-frameworks/java/spring/spring-mvc.md)
-    * [README.md](langue-and-frameworks/java/README.md)
     * [How to use G1 garbage collector](langue-and-frameworks/java/how-to-use-g1-garbage-collector.md)
-    * [# Mybatis](langue-and-frameworks/java/mybatis.md)
     * [How to Print GC log](langue-and-frameworks/java/print-gc-log.md)
     * [spring.md](langue-and-frameworks/java/spring.md)
 * nodejs
@@ -117,7 +112,3 @@
     * [mysql-diff.md](storage-system/mysql/mysql-diff.md)
     * [Mysql Settings](storage-system/mysql/settings.md)
     * [User Management](storage-system/mysql/user-manager.md)
-
-## styles
-
-* [README.md](styles/README.md)
