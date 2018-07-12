@@ -1,4 +1,4 @@
-# **Create Cloudera Manager extensions **
+# Create Cloudera Manager extensions 
 
 <!-- toc -->
 
