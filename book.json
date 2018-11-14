@@ -9,6 +9,7 @@
     "plugins": [
       "alerts",
       "expandable-chapters-interactive",
+      "mathjax",
        "toc",
        "-lunr", "-search", "search-plus-mod"
       ],

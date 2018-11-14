@@ -19,7 +19,7 @@ apt-get install cloudera-manager-daemons cloudera-manager-server
 
 ```
 
-\[1\]:[https://www.cloudera.com/documentation/enterprise/5-13-x/topics/cdh\_ig\_cdh5\_install.html\#topic\_4\_4\_1\_\_section\_dfx\_p51\_nj](https://www.cloudera.com/documentation/enterprise/5-13-x/topics/cdh_ig_cdh5_install.html#topic_4_4_1__section_dfx_p51_nj)
+[1]:[https://www.cloudera.com/documentation/enterprise/5-13-x/topics/cdh_ig_cdh5_install.html#topic_4_4_1__section_dfx_p51_nj](https://www.cloudera.com/documentation/enterprise/5-13-x/topics/cdh_ig_cdh5_install.html#topic_4_4_1__section_dfx_p51_nj)
 
-\[2\]:[https://www.cloudera.com/documentation/enterprise/5-13-x/topics/cm\_ig\_install\_path\_b.html\#cmig\_topic\_6\_6](https://www.cloudera.com/documentation/enterprise/5-13-x/topics/cm_ig_install_path_b.html#cmig_topic_6_6)
+[2]:[https://www.cloudera.com/documentation/enterprise/5-13-x/topics/cm_ig_install_path_b.html#cmig_topic_6_6](https://www.cloudera.com/documentation/enterprise/5-13-x/topics/cm_ig_install_path_b.html#cmig_topic_6_6)
 

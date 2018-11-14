@@ -8,7 +8,7 @@ $$
 
 ### 行内公式
 
-这是行内公式 $a=b$
+这是行内公式 $$a=b$$
 
 ## 矩阵
 
@@ -88,6 +88,6 @@ $$
 
 
 
- 这是行内矩阵 $a = \bigl( \begin{smallmatrix}1 & 1\\ 0 & 1\end{smallmatrix}\bigr)$
+ 这是行内矩阵 $$a = \bigl( \begin{smallmatrix}1 & 1\\ 0 & 1\end{smallmatrix}\bigr)$$
 
 

@@ -39,13 +39,22 @@
 
 ## 数据处理
 
+* [降维](data-process/dimension-reduction/DEFAULT.md)
+    * [LDA.md](data-process/dimension-reduction/LDA.md)
+    * [PCA 主成份分析](data-process/dimension-reduction/PCA.md)
 * machine-learning
     * [机器学习资源](data-process/machine-learning/study-resource.md)
 * [数学知识](data-process/math/DEFAULT.md)
+    * [统计学](data-process/math/statistics/DEFAULT.md)
+        * [基础知识](data-process/math/statistics/basic.md)
+        * [# 方差与标准差](data-process/math/statistics/variance-and-standard-deviation.md)
     * [Mathjax Demo](data-process/math/mathjax-demo.md)
     * [矩阵知识](data-process/math/matrix.md)
 * recomand-system
     * [推荐系统相关文章与开源方案](data-process/recomand-system/atricles-and-systems.md)
+* tensorflow
+    * images
+    * [Optimizer Compare](data-process/tensorflow/optimizer -compare.md)
 * [十大数据挖掘数法](data-process/top-10-data-mining-algorithm/DEFAULT.md)
     * math
         * [最小二乘法](data-process/top-10-data-mining-algorithm/math/least-squares.md)
@@ -72,10 +81,14 @@
 * gong-ju
     * [install-latest-git-version-on-centos.md](devops/gong-ju/install-latest-git-version-on-centos.md)
 * linux
+    * images
     * [iptables](devops/linux/iptables.md)
     * [performance-diagnosis.md](devops/linux/performance-diagnosis.md)
     * [Shell Syntax](devops/linux/shell-syntax.md)
+    * [SSH with Kerbors5 on Ubuntu](devops/linux/ssh-with-kerberos.md)
     * [wget ](devops/linux/wget.md)
+* network
+    * [install-merlin-on-asus-router.md](devops/network/install-merlin-on-asus-router.md)
 * [docker.md](devops/docker.md)
 * [Performance diagnosis](devops/linux.md)
 
@@ -105,9 +118,8 @@
 * mongodb
     * [README.md](storage-system/mongodb/README.md)
 * mysql
-    * chang-yong-cao-zuo
-        * [数据导入导出](storage-system/mysql/chang-yong-cao-zuo/dao-ru-dao-chu.md)
-    * [chang-yong-cao-zuo.md](storage-system/mysql/chang-yong-cao-zuo.md)
+    * operation
+        * [数据导入导出](storage-system/mysql/operation/import-export.md)
     * [Install Mysql Server by Yum](storage-system/mysql/install-by-yum.md)
     * [mysql-diff.md](storage-system/mysql/mysql-diff.md)
     * [Mysql Settings](storage-system/mysql/settings.md)
