@@ -3,4 +3,5 @@ node_js:
   - "lts/*"
 before_script:
   - npm install -g gitbook-cli
+  - gitbook install
 script: gitbook build
