@@ -1,0 +1,2365 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>在 kubernetes 上搭建 hyperledger-fabric · note by zimmem</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus-mod/search-mod.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../data-process/dimension-reduction/DEFAULT.html" />
+    
+    
+    <link rel="prev" href="concept.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://zimmem.com" target="_blank" class="custom-link">Custom link name</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">大数据运维</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../big-data-platform-ops/cdh/DEFAULT.html">
+            
+                <a href="../../big-data-platform-ops/cdh/DEFAULT.html">
+            
+                    
+                    cdh
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../big-data-platform-ops/cdh/create-cloudera-manager-extensions.html">
+            
+                <a href="../../big-data-platform-ops/cdh/create-cloudera-manager-extensions.html">
+            
+                    
+                    Create Cloudera Manager extensions 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../big-data-platform-ops/cdh/create-custom-cloudera-add-on-service.html">
+            
+                <a href="../../big-data-platform-ops/cdh/create-custom-cloudera-add-on-service.html">
+            
+                    
+                    Create Custom Cloudera Add-on Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../big-data-platform-ops/cdh/create-custom-repository.html">
+            
+                <a href="../../big-data-platform-ops/cdh/create-custom-repository.html">
+            
+                    
+                    Create Custom Repository 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../big-data-platform-ops/cdh/extjs-dependency-by-oozie.html">
+            
+                <a href="../../big-data-platform-ops/cdh/extjs-dependency-by-oozie.html">
+            
+                    
+                    extjs-dependency-by-oozie.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../big-data-platform-ops/cdh/install-cdh-on-ubuntu-16.html">
+            
+                <a href="../../big-data-platform-ops/cdh/install-cdh-on-ubuntu-16.html">
+            
+                    
+                    install-cdh-on-ubuntu-16.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../big-data-platform-ops/cdh/install-cloudera-manager-on-centos-6.html">
+            
+                <a href="../../big-data-platform-ops/cdh/install-cloudera-manager-on-centos-6.html">
+            
+                    
+                    Install Cloudera Manager on CentOS 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../big-data-platform-ops/cdh/install-cm-on-ubuntu-16.html">
+            
+                <a href="../../big-data-platform-ops/cdh/install-cm-on-ubuntu-16.html">
+            
+                    
+                    Install Cloudera Manager on Ubuntu 16
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../big-data-platform-ops/cdh/readwrite-hive-table-when-running-spark2-by-oozie.html">
+            
+                <a href="../../big-data-platform-ops/cdh/readwrite-hive-table-when-running-spark2-by-oozie.html">
+            
+                    
+                    Read/Write hive table when running spark2 by oozie
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    hadoop
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../big-data-platform-ops/hadoop/hdfs.html">
+            
+                <a href="../../big-data-platform-ops/hadoop/hdfs.html">
+            
+                    
+                    hdfs.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../big-data-platform-ops/hadoop/resource-configuration.html">
+            
+                <a href="../../big-data-platform-ops/hadoop/resource-configuration.html">
+            
+                    
+                    Resource Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    hbase
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../big-data-platform-ops/hbase/">
+            
+                <a href="../../big-data-platform-ops/hbase/">
+            
+                    
+                    README.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    hive
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../big-data-platform-ops/hive/">
+            
+                <a href="../../big-data-platform-ops/hive/">
+            
+                    
+                    README.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    impala
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../big-data-platform-ops/impala/maintenance-instructions.html">
+            
+                <a href="../../big-data-platform-ops/impala/maintenance-instructions.html">
+            
+                    
+                    Impala Maintenance Instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    spark
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../big-data-platform-ops/spark/cvc.html">
+            
+                <a href="../../big-data-platform-ops/spark/cvc.html">
+            
+                    
+                    cvc.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../big-data-platform-ops/spark/spark-dataframe-join.html">
+            
+                <a href="../../big-data-platform-ops/spark/spark-dataframe-join.html">
+            
+                    
+                    Spark DataFrame Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../big-data-platform-ops/spark/spark-shell.html">
+            
+                <a href="../../big-data-platform-ops/spark/spark-shell.html">
+            
+                    
+                    Spark Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../big-data-platform-ops/spark/spark-submit.html">
+            
+                <a href="../../big-data-platform-ops/spark/spark-submit.html">
+            
+                    
+                    Spark Submit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../big-data-platform-ops/apache-ambari-installation.html">
+            
+                <a href="../../big-data-platform-ops/apache-ambari-installation.html">
+            
+                    
+                    Apache Ambari Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../big-data-platform-ops/big-data-platform-ops.html">
+            
+                <a href="../../big-data-platform-ops/big-data-platform-ops.html">
+            
+                    
+                    big-data-platform-ops.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../big-data-platform-ops/hdp.html">
+            
+                <a href="../../big-data-platform-ops/hdp.html">
+            
+                    
+                    hdp.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">区块链</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    hyperledger-fabric
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" >
+            
+                <span>
+            
+                    
+                    img
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="block-struct.html">
+            
+                <a href="block-struct.html">
+            
+                    
+                    Block Struct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="concept.html">
+            
+                <a href="concept.html">
+            
+                    
+                    概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.4" data-path="deploy-fabric-on-kubernetes.html">
+            
+                <a href="deploy-fabric-on-kubernetes.html">
+            
+                    
+                    在 kubernetes 上搭建 hyperledger-fabric
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据处理</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../data-process/dimension-reduction/DEFAULT.html">
+            
+                <a href="../../data-process/dimension-reduction/DEFAULT.html">
+            
+                    
+                    降维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../data-process/dimension-reduction/LDA.html">
+            
+                <a href="../../data-process/dimension-reduction/LDA.html">
+            
+                    
+                    LDA.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../data-process/dimension-reduction/PCA.html">
+            
+                <a href="../../data-process/dimension-reduction/PCA.html">
+            
+                    
+                    PCA 主成份分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    machine-learning
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../data-process/machine-learning/study-resource.html">
+            
+                <a href="../../data-process/machine-learning/study-resource.html">
+            
+                    
+                    机器学习资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../data-process/math/DEFAULT.html">
+            
+                <a href="../../data-process/math/DEFAULT.html">
+            
+                    
+                    数学知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../data-process/math/statistics/DEFAULT.html">
+            
+                <a href="../../data-process/math/statistics/DEFAULT.html">
+            
+                    
+                    统计学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1.1" data-path="../../data-process/math/statistics/basic.html">
+            
+                <a href="../../data-process/math/statistics/basic.html">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.1.2" data-path="../../data-process/math/statistics/variance-and-standard-deviation.html">
+            
+                <a href="../../data-process/math/statistics/variance-and-standard-deviation.html">
+            
+                    
+                    # 方差与标准差
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../data-process/math/mathjax-demo.html">
+            
+                <a href="../../data-process/math/mathjax-demo.html">
+            
+                    
+                    Mathjax Demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../../data-process/math/matrix.html">
+            
+                <a href="../../data-process/math/matrix.html">
+            
+                    
+                    矩阵知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    recomand-system
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../data-process/recomand-system/atricles-and-systems.html">
+            
+                <a href="../../data-process/recomand-system/atricles-and-systems.html">
+            
+                    
+                    推荐系统相关文章与开源方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    tensorflow
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" >
+            
+                <span>
+            
+                    
+                    images
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="../../data-process/tensorflow/optimizer -compare.html">
+            
+                <a href="../../data-process/tensorflow/optimizer -compare.html">
+            
+                    
+                    Optimizer Compare
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../data-process/top-10-data-mining-algorithm/DEFAULT.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/DEFAULT.html">
+            
+                    
+                    十大数据挖掘数法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" >
+            
+                <span>
+            
+                    
+                    math
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1.1" data-path="../../data-process/top-10-data-mining-algorithm/math/least-squares.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/math/least-squares.html">
+            
+                    
+                    最小二乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../../data-process/top-10-data-mining-algorithm/AdaBoost.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/AdaBoost.html">
+            
+                    
+                    AdaBoost.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3" data-path="../../data-process/top-10-data-mining-algorithm/Apriori.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/Apriori.html">
+            
+                    
+                    Apriori.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4" data-path="../../data-process/top-10-data-mining-algorithm/C4.5.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/C4.5.html">
+            
+                    
+                    数据挖掘十大经典算法之 C4.5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.5" data-path="../../data-process/top-10-data-mining-algorithm/CART.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/CART.html">
+            
+                    
+                    CART.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.6" data-path="../../data-process/top-10-data-mining-algorithm/EM.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/EM.html">
+            
+                    
+                    EM.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.7" data-path="../../data-process/top-10-data-mining-algorithm/Naive-Baye.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/Naive-Baye.html">
+            
+                    
+                    Naive-Baye.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.8" data-path="../../data-process/top-10-data-mining-algorithm/PageRank.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/PageRank.html">
+            
+                    
+                    PageRank.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.9" data-path="../../data-process/top-10-data-mining-algorithm/Svm.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/Svm.html">
+            
+                    
+                    Svm.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.10" data-path="../../data-process/top-10-data-mining-algorithm/k-means.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/k-means.html">
+            
+                    
+                    k-means.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.11" data-path="../../data-process/top-10-data-mining-algorithm/kNN.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/kNN.html">
+            
+                    
+                    kNN.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.12" data-path="../../data-process/top-10-data-mining-algorithm/top-10-data-mining-algorithm.html">
+            
+                <a href="../../data-process/top-10-data-mining-algorithm/top-10-data-mining-algorithm.html">
+            
+                    
+                    top-10-data-mining-algorithm.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据仓库</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../data-warehouse/wen-zhang-zhai-xuan.html">
+            
+                <a href="../../data-warehouse/wen-zhang-zhai-xuan.html">
+            
+                    
+                    Articles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">运维开发</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../devops/docker/an-zhuang-hou-mian-sudo.html">
+            
+                <a href="../../devops/docker/an-zhuang-hou-mian-sudo.html">
+            
+                    
+                    安装后免 sudo 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <span>
+            
+                    
+                    gong-ju
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../devops/gong-ju/install-latest-git-version-on-centos.html">
+            
+                <a href="../../devops/gong-ju/install-latest-git-version-on-centos.html">
+            
+                    
+                    install-latest-git-version-on-centos.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <span>
+            
+                    
+                    linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" >
+            
+                <span>
+            
+                    
+                    images
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../../devops/linux/iptables.html">
+            
+                <a href="../../devops/linux/iptables.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.3" data-path="../../devops/linux/performance-diagnosis.html">
+            
+                <a href="../../devops/linux/performance-diagnosis.html">
+            
+                    
+                    performance-diagnosis.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.4" data-path="../../devops/linux/shell-syntax.html">
+            
+                <a href="../../devops/linux/shell-syntax.html">
+            
+                    
+                    Shell Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.5" data-path="../../devops/linux/ssh-with-kerberos.html">
+            
+                <a href="../../devops/linux/ssh-with-kerberos.html">
+            
+                    
+                    SSH with Kerbors5 on Ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.6" data-path="../../devops/linux/wget.html">
+            
+                <a href="../../devops/linux/wget.html">
+            
+                    
+                    wget 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" >
+            
+                <span>
+            
+                    
+                    network
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.4.1" data-path="../../devops/network/install-merlin-on-asus-router.html">
+            
+                <a href="../../devops/network/install-merlin-on-asus-router.html">
+            
+                    
+                    install-merlin-on-asus-router.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../../devops/docker.html">
+            
+                <a href="../../devops/docker.html">
+            
+                    
+                    docker.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../../devops/linux.html">
+            
+                <a href="../../devops/linux.html">
+            
+                    
+                    Performance diagnosis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发语言与框架</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <span>
+            
+                    
+                    dubbo
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../langue-and-frameworks/dubbo/">
+            
+                <a href="../../langue-and-frameworks/dubbo/">
+            
+                    
+                    README.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <span>
+            
+                    
+                    java
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" >
+            
+                <span>
+            
+                    
+                    mybatis
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" >
+            
+                <span>
+            
+                    
+                    spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.2.1" >
+            
+                <span>
+            
+                    
+                    spring-mvc
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.2.1.1" data-path="../../langue-and-frameworks/java/spring/spring-mvc/zi-ding-yi-can-shu-jie-xi.html">
+            
+                <a href="../../langue-and-frameworks/java/spring/spring-mvc/zi-ding-yi-can-shu-jie-xi.html">
+            
+                    
+                    扩展点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2.2" data-path="../../langue-and-frameworks/java/spring/chang-yong-kuo-zhan.html">
+            
+                <a href="../../langue-and-frameworks/java/spring/chang-yong-kuo-zhan.html">
+            
+                    
+                    常用扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2.3" data-path="../../langue-and-frameworks/java/spring/spring-mvc.html">
+            
+                <a href="../../langue-and-frameworks/java/spring/spring-mvc.html">
+            
+                    
+                    Srping MVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../../langue-and-frameworks/java/how-to-use-g1-garbage-collector.html">
+            
+                <a href="../../langue-and-frameworks/java/how-to-use-g1-garbage-collector.html">
+            
+                    
+                    How to use G1 garbage collector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../../langue-and-frameworks/java/print-gc-log.html">
+            
+                <a href="../../langue-and-frameworks/java/print-gc-log.html">
+            
+                    
+                    How to Print GC log
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="../../langue-and-frameworks/java/spring.html">
+            
+                <a href="../../langue-and-frameworks/java/spring.html">
+            
+                    
+                    spring.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <span>
+            
+                    
+                    nodejs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../langue-and-frameworks/nodejs/pei-zhiregistry-jing-xiang-huo-dai-li.html">
+            
+                <a href="../../langue-and-frameworks/nodejs/pei-zhiregistry-jing-xiang-huo-dai-li.html">
+            
+                    
+                    npm 配置 registry 镜像或代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <span>
+            
+                    
+                    spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../../langue-and-frameworks/spring/">
+            
+                <a href="../../langue-and-frameworks/spring/">
+            
+                    
+                    配置项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.2" data-path="../../langue-and-frameworks/spring/maintenance-instructions.html">
+            
+                <a href="../../langue-and-frameworks/spring/maintenance-instructions.html">
+            
+                    
+                    Hive Maintenance Instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.3" data-path="../../langue-and-frameworks/spring/xxx.html">
+            
+                <a href="../../langue-and-frameworks/spring/xxx.html">
+            
+                    
+                    xxx.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">存储系统</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" >
+            
+                <span>
+            
+                    
+                    mongodb
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../storage-system/mongodb/">
+            
+                <a href="../../storage-system/mongodb/">
+            
+                    
+                    README.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" >
+            
+                <span>
+            
+                    
+                    mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" >
+            
+                <span>
+            
+                    
+                    operation
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1.1" data-path="../../storage-system/mysql/operation/import-export.html">
+            
+                <a href="../../storage-system/mysql/operation/import-export.html">
+            
+                    
+                    数据导入导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="../../storage-system/mysql/install-by-yum.html">
+            
+                <a href="../../storage-system/mysql/install-by-yum.html">
+            
+                    
+                    Install Mysql Server by Yum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="../../storage-system/mysql/mysql-diff.html">
+            
+                <a href="../../storage-system/mysql/mysql-diff.html">
+            
+                    
+                    mysql-diff.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.4" data-path="../../storage-system/mysql/settings.html">
+            
+                <a href="../../storage-system/mysql/settings.html">
+            
+                    
+                    Mysql Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.5" data-path="../../storage-system/mysql/user-manager.html">
+            
+                <a href="../../storage-system/mysql/user-manager.html">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >在 kubernetes 上搭建 hyperledger-fabric</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5728;-kubernetes-&#x4E0A;&#x642D;&#x5EFA;-hyperledger-fabric">&#x5728; kubernetes &#x4E0A;&#x642D;&#x5EFA; hyperledger-fabric</h1>
+<h2 id="&#x4FEE;&#x6539;-k8s-&#x7ED3;&#x70B9;-dns-&#x914D;&#x7F6E;">&#x4FEE;&#x6539; K8S &#x7ED3;&#x70B9; DNS &#x914D;&#x7F6E;</h2>
+<p>&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C; </p>
+<ul>
+<li>&#x4FEE;&#x6539; docker &#x542F;&#x52A8;&#x53C2;&#x6570;</li>
+<li>&#x4FEE;&#x6539;&#x7ED3;&#x70B9; /etc/resolv.conf</li>
+</ul>
+<h2 id="&#x521B;&#x5EFA;-namespace">&#x521B;&#x5EFA; namespace</h2>
+<pre><code class="lang-bash"><span class="hljs-built_in">declare</span> <span class="hljs-_">-a</span> arr=(<span class="hljs-string">&quot;fabric-orderer&quot;</span> <span class="hljs-string">&quot;fabric-org-1&quot;</span> <span class="hljs-string">&quot;fabric-org-2&quot;</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${arr[@]}</span>&quot;</span>
+<span class="hljs-keyword">do</span>
+   kubectl create namespace <span class="hljs-variable">$i</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;&#x5171;&#x4EAB;-volumn">&#x521B;&#x5EFA;&#x5171;&#x4EAB; Volumn</h2>
+<p>&#x4E3A;&#x65B9;&#x4FBF; pod &#x95F4;&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#xFF0C; &#x4F7F;&#x7528;  nfs-volumn</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># read line with space</span>
+IFS=<span class="hljs-string">&apos;&apos;</span>
+<span class="hljs-built_in">declare</span> <span class="hljs-_">-a</span> arr=(<span class="hljs-string">&quot;default&quot;</span> <span class="hljs-string">&quot;fabric-orderer&quot;</span> <span class="hljs-string">&quot;fabric-org-1&quot;</span> <span class="hljs-string">&quot;fabric-org-2&quot;</span>)
+nfs_server=10.100.240.76
+<span class="hljs-keyword">for</span> ns <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${arr[@]}</span>&quot;</span>
+<span class="hljs-keyword">do</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-fabric-dev-for-<span class="hljs-variable">${ns}</span>
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 10Gi
+  nfs:
+    path: /
+    server: <span class="hljs-variable">${nfs_server}</span>
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fabric-pvc-for-<span class="hljs-variable">${ns}</span>
+  namespace: <span class="hljs-variable">${ns}</span>
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 3Gi
+  storageClassName: &quot;</span><span class="hljs-string">&quot;
+  volumeName: nfs-fabric-dev-for-<span class="hljs-variable">${ns}</span>
+
+&quot;</span> | kubectl create <span class="hljs-_">-f</span> -
+<span class="hljs-keyword">done</span>
+</code></pre>
+<h2 id="&#x642D;&#x5EFA;-fabric-tools">&#x642D;&#x5EFA; fabric-tools</h2>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> extensions/v1beta1
+<span class="hljs-attr">kind:</span> Deployment
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    name:</span> fabric-tools
+<span class="hljs-attr">  name:</span> fabric-tools
+<span class="hljs-attr">  namespace:</span> default
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  replicas:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    matchLabels:</span>
+<span class="hljs-attr">      name:</span> fabric-tools
+<span class="hljs-attr">  template:</span>
+<span class="hljs-attr">    metadata:</span>
+<span class="hljs-attr">      labels:</span>
+<span class="hljs-attr">        name:</span> fabric-tools
+<span class="hljs-attr">    spec:</span>
+<span class="hljs-attr">      containers:</span>
+<span class="hljs-attr">      - args:</span>
+<span class="hljs-bullet">        -</span> sleep
+<span class="hljs-bullet">        -</span> <span class="hljs-string">&quot;999999999&quot;</span>
+<span class="hljs-attr">        image:</span> registry.docker-cn.com/hyperledger/fabric-tools:x86_64<span class="hljs-bullet">-1.1</span><span class="hljs-number">.0</span>
+<span class="hljs-attr">        name:</span> fabric-tools
+<span class="hljs-attr">        volumeMounts:</span>
+<span class="hljs-attr">        - mountPath:</span> /etc/hyperledger/fabric
+<span class="hljs-attr">          name:</span> fabric-config
+<span class="hljs-attr">      volumes:</span>
+<span class="hljs-attr">      - name:</span> fabric-config
+<span class="hljs-attr">        persistentVolumeClaim:</span>
+<span class="hljs-attr">          claimName:</span> fabric-pvc-for-default
+</code></pre>
+<h2 id="&#x751F;&#x6210;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x751F;&#x6210;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
+<p>&#x4E00;&#x4E2A; orderer &#x7ED3;&#x70B9; &#xFF0C; &#x4E24;&#x4E2A;&#x7EC4;&#x7EC7;&#xFF0C; &#x6BCF;&#x4E2A;&#x7EC4;&#x7EC7;&#x4E24;&#x4E2A; peer</p>
+<p>&#x8FDB;&#x5165; fabric-tool pod &#x7684; bash</p>
+<pre><code class="lang-bash">kubectl <span class="hljs-built_in">exec</span> -it fabric-tools-xxx bash
+</code></pre>
+<p>&#x521B;&#x5EFA; crypto-config.yaml &#x5E76;&#x751F;&#x6210;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash">cat &gt; /etc/hyperledger/fabric/crypto-config.yaml &lt;&lt;EOF
+OrdererOrgs:
+  - Name: Orderer
+    Domain: fabric-orderer
+    Specs:
+      - Hostname: orderer
+
+PeerOrgs:
+  - Name: Org1
+    Domain: fabric-org-1
+    Template:
+      Count: 2
+    Users:
+      Count: 2
+  - Name: Org2
+    Domain: fabric-org-2
+    Template:
+      Count: 2
+    Users:
+      Count: 2
+EOF
+cryptogen generate --config /etc/hyperledger/fabric/crypto-config.yaml --output /etc/hyperledger/fabric/crypto-config
+</code></pre>
+<p>&#x521B;&#x5EFA; /etc/hyperledger/fabric/configtx.yaml &#x6587;&#x4EF6;</p>
+<blockquote>
+<p>&#x53C2;&#x8003; <a href="https://raw.githubusercontent.com/hyperledger/fabric/v1.1/examples/e2e_cli/configtx.yaml" target="_blank">https://raw.githubusercontent.com/hyperledger/fabric/v1.1/examples/e2e_cli/configtx.yaml</a></p>
+</blockquote>
+<pre><code class="lang-yaml"><span class="hljs-attr">Profiles:</span>
+<span class="hljs-attr">    TwoOrgsOrdererGenesis:</span>
+<span class="hljs-attr">        Orderer:</span>
+            &lt;&lt;: <span class="hljs-meta">*OrdererDefaults</span>
+<span class="hljs-attr">            Organizations:</span>
+<span class="hljs-bullet">                -</span> <span class="hljs-meta">*OrdererOrg</span>
+<span class="hljs-attr">            Capabilities:</span>
+                &lt;&lt;: <span class="hljs-meta">*OrdererCapabilities</span>
+<span class="hljs-attr">        Consortiums:</span>
+<span class="hljs-attr">            SampleConsortium:</span>
+<span class="hljs-attr">                Organizations:</span>
+<span class="hljs-bullet">                    -</span> <span class="hljs-meta">*Org1</span>
+<span class="hljs-bullet">                    -</span> <span class="hljs-meta">*Org2</span>
+<span class="hljs-attr">    TwoOrgsChannel:</span>
+<span class="hljs-attr">        Consortium:</span> SampleConsortium
+<span class="hljs-attr">        Application:</span>
+            &lt;&lt;: <span class="hljs-meta">*ApplicationDefaults</span>
+<span class="hljs-attr">            Organizations:</span>
+<span class="hljs-bullet">                -</span> <span class="hljs-meta">*Org1</span>
+<span class="hljs-bullet">                -</span> <span class="hljs-meta">*Org2</span>
+<span class="hljs-attr">            Capabilities:</span>
+                &lt;&lt;: <span class="hljs-meta">*ApplicationCapabilities</span>
+<span class="hljs-attr">Organizations:</span>
+<span class="hljs-bullet">    -</span> <span class="hljs-meta">&amp;OrdererOrg</span>
+<span class="hljs-attr">        Name:</span> OrdererOrg
+<span class="hljs-attr">        ID:</span> OrdererMSP
+<span class="hljs-attr">        AdminPrincipal:</span> Role.ADMIN
+<span class="hljs-attr">        MSPDir:</span> crypto-config/ordererOrganizations/fabric-orderer/msp
+<span class="hljs-bullet">    -</span> <span class="hljs-meta">&amp;Org1</span>
+<span class="hljs-attr">        Name:</span> Org1MSP
+<span class="hljs-attr">        ID:</span> Org1MSP
+<span class="hljs-attr">        MSPDir:</span> crypto-config/peerOrganizations/fabric-org<span class="hljs-bullet">-1</span>/msp
+<span class="hljs-attr">        AdminPrincipal:</span> Role.ADMIN
+<span class="hljs-attr">        AnchorPeers:</span>
+<span class="hljs-attr">            - Host:</span> peer0.fabric-org<span class="hljs-bullet">-1</span>
+<span class="hljs-attr">              Port:</span> <span class="hljs-number">7051</span>
+<span class="hljs-bullet">    -</span> <span class="hljs-meta">&amp;Org2</span>
+<span class="hljs-attr">        Name:</span> Org2MSP
+<span class="hljs-attr">        ID:</span> Org2MSP
+<span class="hljs-attr">        MSPDir:</span> crypto-config/peerOrganizations/fabric-org<span class="hljs-bullet">-2</span>/msp
+<span class="hljs-attr">        AdminPrincipal:</span> Role.ADMIN
+<span class="hljs-attr">        AnchorPeers:</span>
+<span class="hljs-attr">            - Host:</span> peer0.fabric-org<span class="hljs-bullet">-2</span>
+<span class="hljs-attr">              Port:</span> <span class="hljs-number">7051</span>
+<span class="hljs-attr">Orderer:</span> <span class="hljs-meta">&amp;OrdererDefaults</span>
+<span class="hljs-attr">    OrdererType:</span> kafka
+<span class="hljs-attr">    Addresses:</span>
+<span class="hljs-bullet">        -</span> orderer.fabric-orderer:<span class="hljs-number">7050</span>
+<span class="hljs-attr">    BatchTimeout:</span> <span class="hljs-number">2</span>s
+<span class="hljs-attr">    BatchSize:</span>
+<span class="hljs-attr">        MaxMessageCount:</span> <span class="hljs-number">10</span>
+<span class="hljs-attr">        AbsoluteMaxBytes:</span> <span class="hljs-number">98</span> MB
+<span class="hljs-attr">        PreferredMaxBytes:</span> <span class="hljs-number">512</span> KB
+<span class="hljs-attr">    Kafka:</span>
+<span class="hljs-attr">        Brokers:</span>
+<span class="hljs-bullet">            -</span> kafka-service.default:<span class="hljs-number">9092</span>
+<span class="hljs-attr">    Organizations:</span>
+<span class="hljs-attr">Application:</span> <span class="hljs-meta">&amp;ApplicationDefaults</span>
+<span class="hljs-attr">    Organizations:</span>
+<span class="hljs-attr">Capabilities:</span>
+<span class="hljs-attr">    Global:</span> <span class="hljs-meta">&amp;ChannelCapabilities</span>
+<span class="hljs-attr">        V1_1:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    Orderer:</span> <span class="hljs-meta">&amp;OrdererCapabilities</span>
+<span class="hljs-attr">        V1_1:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    Application:</span> <span class="hljs-meta">&amp;ApplicationCapabilities</span>
+<span class="hljs-attr">        V1_1:</span> <span class="hljs-literal">true</span>
+</code></pre>
+<p>&#x751F;&#x6210;&#x521B;&#x4E16;&#x533A;&#x5757;</p>
+<pre><code>cd /etc/hyperledger/fabric
+configtxgen -profile TwoOrgsOrdererGenesis -outputBlock ./crypto-config/ordererOrganizations/fabric-orderer/orderers/orderer.fabric-orderer/orderer.genesis.block
+</code></pre><pre><code class="lang-bash">CHANNEL_NAME=<span class="hljs-built_in">test</span>-channel
+
+<span class="hljs-comment"># &#x751F;&#x6210; channel</span>
+configtxgen -profile TwoOrgsChannel -outputCreateChannelTx ./<span class="hljs-variable">${CHANNEL_NAME}</span>.tx -channelID <span class="hljs-variable">${CHANNEL_NAME}</span>
+
+<span class="hljs-comment"># &#x751F;&#x6210; org1, org2 &#x7684;&#x951A;&#x70B9;&#x6587;&#x4EF6;</span>
+configtxgen \
+    -profile TwoOrgsChannel \
+    -outputAnchorPeersUpdate ./Org1MSPanchors.tx \
+    -channelID <span class="hljs-variable">${CHANNEL_NAME}</span> \
+    -asOrg Org1MSP 
+
+configtxgen \
+    -profile TwoOrgsChannel \
+    -outputAnchorPeersUpdate ./Org2MSPanchors.tx \
+    -channelID <span class="hljs-variable">${CHANNEL_NAME}</span> \
+    -asOrg Org2MSP
+</code></pre>
+<h2 id="&#x642D;&#x5EFA;-orderer-&#x7ED3;&#x70B9;">&#x642D;&#x5EFA; orderer &#x7ED3;&#x70B9;</h2>
+<p>&#x628A; configtx.yaml &#x590D;&#x5236;&#x5230; /etc/hyperledger/fabric/crypto-config/ordererOrganizations/fabric-orderer/orderers/orderer.fabric-orderer/configtx.yaml</p>
+<p>&#x521B;&#x5EFA; /etc/hyperledger/fabric/crypto-config/ordererOrganizations/fabric-orderer/orderers/orderer.fabric-orderer/orderer.yaml</p>
+<blockquote>
+<p>&#x53C2;&#x8003; <a href="https://github.com/hyperledger/fabric/blob/v1.1.0/sampleconfig/orderer.yaml" target="_blank">https://github.com/hyperledger/fabric/blob/v1.1.0/sampleconfig/orderer.yaml</a></p>
+</blockquote>
+<pre><code class="lang-yaml"><span class="hljs-attr">General:</span>
+<span class="hljs-attr">    LedgerType:</span> file
+<span class="hljs-attr">    ListenAddress:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>
+<span class="hljs-attr">    ListenPort:</span> <span class="hljs-number">7050</span>
+<span class="hljs-attr">    TLS:</span>
+<span class="hljs-attr">        Enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">        PrivateKey:</span> tls/server.key
+<span class="hljs-attr">        Certificate:</span> tls/server.crt
+<span class="hljs-attr">        RootCAs:</span>
+<span class="hljs-bullet">          -</span> tls/ca.crt
+<span class="hljs-attr">        ClientAuthRequired:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">        ClientRootCAs:</span>
+<span class="hljs-attr">    Keepalive:</span>
+<span class="hljs-attr">        ServerMinInterval:</span> <span class="hljs-number">60</span>s
+<span class="hljs-attr">        ServerInterval:</span> <span class="hljs-number">7200</span>s
+<span class="hljs-attr">        ServerTimeout:</span> <span class="hljs-number">20</span>s
+<span class="hljs-attr">    LogLevel:</span> info
+<span class="hljs-attr">    LogFormat:</span> <span class="hljs-string">&apos;<span class="hljs-template-variable">%{color}</span><span class="hljs-template-variable">%{time:2006-01-02 15:04:05.000 MST}</span> [<span class="hljs-template-variable">%{module}</span>] <span class="hljs-template-variable">%{shortfunc}</span> -&gt; <span class="hljs-template-variable">%{level:.4s}</span> <span class="hljs-template-variable">%{id:03x}</span><span class="hljs-template-variable">%{color:reset}</span> <span class="hljs-template-variable">%{message}</span>&apos;</span>
+<span class="hljs-attr">    GenesisMethod:</span> provisional
+<span class="hljs-attr">    GenesisProfile:</span> TwoOrgsOrdererGenesis
+<span class="hljs-attr">    GenesisFile:</span> orderer.genesis.block
+<span class="hljs-attr">    LocalMSPDir:</span> /etc/hyperledger/fabric/msp
+<span class="hljs-attr">    LocalMSPID:</span> OrdererMSP
+<span class="hljs-attr">    Profile:</span>
+<span class="hljs-attr">        Enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">        Address:</span> <span class="hljs-number">0.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span>:<span class="hljs-number">6060</span>
+<span class="hljs-attr">    BCCSP:</span>
+<span class="hljs-attr">        Default:</span> SW
+<span class="hljs-attr">        SW:</span>
+<span class="hljs-attr">            Hash:</span> SHA2
+<span class="hljs-attr">            Security:</span> <span class="hljs-number">256</span>
+<span class="hljs-attr">            FileKeyStore:</span>
+<span class="hljs-attr">                KeyStore:</span>
+<span class="hljs-attr">    Authentication:</span>
+<span class="hljs-attr">        TimeWindow:</span> <span class="hljs-number">15</span>m
+<span class="hljs-attr">FileLedger:</span>
+<span class="hljs-attr">    Location:</span> /var/hyperledger/production/orderer
+<span class="hljs-attr">    Prefix:</span> hyperledger-fabric-ordererledger
+<span class="hljs-attr">RAMLedger:</span>
+<span class="hljs-attr">    HistorySize:</span> <span class="hljs-number">1000</span>
+<span class="hljs-attr">Kafka:</span>
+<span class="hljs-attr">    Retry:</span>
+<span class="hljs-attr">        ShortInterval:</span> <span class="hljs-number">5</span>s
+<span class="hljs-attr">        ShortTotal:</span> <span class="hljs-number">10</span>m
+<span class="hljs-attr">        LongInterval:</span> <span class="hljs-number">5</span>m
+<span class="hljs-attr">        LongTotal:</span> <span class="hljs-number">12</span>h
+<span class="hljs-attr">        NetworkTimeouts:</span>
+<span class="hljs-attr">            DialTimeout:</span> <span class="hljs-number">10</span>s
+<span class="hljs-attr">            ReadTimeout:</span> <span class="hljs-number">10</span>s
+<span class="hljs-attr">            WriteTimeout:</span> <span class="hljs-number">10</span>s
+<span class="hljs-attr">        Metadata:</span>
+<span class="hljs-attr">            RetryBackoff:</span> <span class="hljs-number">250</span>ms
+<span class="hljs-attr">            RetryMax:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">        Producer:</span>
+<span class="hljs-attr">            RetryBackoff:</span> <span class="hljs-number">100</span>ms
+<span class="hljs-attr">            RetryMax:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">        Consumer:</span>
+<span class="hljs-attr">            RetryBackoff:</span> <span class="hljs-number">2</span>s
+<span class="hljs-attr">    Verbose:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    TLS:</span>
+<span class="hljs-attr">      Enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">      PrivateKey:</span>
+<span class="hljs-attr">      Certificate:</span>
+<span class="hljs-attr">      RootCAs:</span>
+<span class="hljs-attr">    Version:</span>
+<span class="hljs-attr">Debug:</span>
+<span class="hljs-attr">    BroadcastTraceDir:</span>
+<span class="hljs-attr">    DeliverTraceDir:</span>
+</code></pre>
+<p>&#x5728; k8s &#x4E0A;&#x521B;&#x5EFA; orderer  &#x7684; service &#x53CA; deployment</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Service
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> orderer
+<span class="hljs-attr">  namespace:</span> fabric-orderer
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  ports:</span>
+<span class="hljs-attr">  - name:</span> tcp<span class="hljs-bullet">-7050</span>
+<span class="hljs-attr">    port:</span> <span class="hljs-number">7050</span>
+<span class="hljs-attr">    protocol:</span> TCP
+<span class="hljs-attr">    targetPort:</span> <span class="hljs-number">7050</span>
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    name:</span> fabric-orderer
+
+<span class="hljs-meta">---</span>
+<span class="hljs-attr">apiVersion:</span> extensions/v1beta1
+<span class="hljs-attr">kind:</span> Deployment
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    name:</span> fabric-orderer
+<span class="hljs-attr">  name:</span> fabric-orderer
+<span class="hljs-attr">  namespace:</span> fabric-orderer
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  replicas:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    matchLabels:</span>
+<span class="hljs-attr">      name:</span> fabric-orderer
+<span class="hljs-attr">  template:</span>
+<span class="hljs-attr">    metadata:</span>
+<span class="hljs-attr">      labels:</span>
+<span class="hljs-attr">        name:</span> fabric-orderer
+<span class="hljs-attr">    spec:</span>
+<span class="hljs-attr">      containers:</span>
+<span class="hljs-attr">      - args:</span>
+<span class="hljs-bullet">        -</span> orderer
+<span class="hljs-bullet">        -</span> start
+<span class="hljs-attr">        image:</span> registry.docker-cn.com/hyperledger/fabric-orderer:x86_64<span class="hljs-bullet">-1.1</span><span class="hljs-number">.0</span>
+<span class="hljs-attr">        name:</span> fabric-orderer
+<span class="hljs-attr">        env:</span>
+<span class="hljs-attr">        - name:</span> ORDERER_GENERAL_LISTENADDRESS
+<span class="hljs-attr">          value:</span> <span class="hljs-number">0.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span>
+<span class="hljs-attr">        - name:</span> ORDERER_GENERAL_TLS_ENABLED
+<span class="hljs-attr">          value:</span> <span class="hljs-string">&quot;true&quot;</span>
+<span class="hljs-attr">        - name:</span> ORDERER_GENERAL_TLS_ROOTCAS
+<span class="hljs-attr">          value:</span> <span class="hljs-string">&quot;[/etc/hyperledger/fabric/tls/ca.crt]&quot;</span>
+<span class="hljs-attr">        - name:</span> ORDERER_GENERAL_LOCALMSPID
+<span class="hljs-attr">          value:</span> OrdererMSP
+<span class="hljs-attr">        - name:</span> ORDERER_GENERAL_LOCALMSPDIR
+<span class="hljs-attr">          value:</span> /etc/hyperledger/fabric/msp
+<span class="hljs-attr">        volumeMounts:</span>
+<span class="hljs-attr">        - mountPath:</span> /etc/hyperledger/fabric/
+<span class="hljs-attr">          name:</span> fabric-config
+<span class="hljs-attr">          subPath:</span> crypto-config/ordererOrganizations/fabric-orderer/orderers/orderer.fabric-orderer
+<span class="hljs-attr">        - mountPath:</span> /etc/hyperledger/fabric/crypto-config
+<span class="hljs-attr">          name:</span> fabric-config
+<span class="hljs-attr">          subPath:</span> crypto-config
+<span class="hljs-attr">      volumes:</span>
+<span class="hljs-attr">      - name:</span> fabric-config
+<span class="hljs-attr">        persistentVolumeClaim:</span>
+<span class="hljs-attr">          claimName:</span> fabric-pvc-for-fabric-orderer
+</code></pre>
+<h2 id="&#x642D;&#x5EFA;-peer-&#x7ED3;&#x70B9;">&#x642D;&#x5EFA; peer &#x7ED3;&#x70B9;</h2>
+<pre><code class="lang-bash">IFS=<span class="hljs-string">&apos;&apos;</span>
+<span class="hljs-built_in">declare</span> <span class="hljs-_">-a</span> orgIds=(<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-string">&quot;2&quot;</span>)
+<span class="hljs-keyword">for</span> org_id <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${orgIds[@]}</span>&quot;</span>
+<span class="hljs-keyword">do</span>
+    namespace=fabric-org-<span class="hljs-variable">${org_id}</span>
+    <span class="hljs-built_in">declare</span> <span class="hljs-_">-a</span> peers=(<span class="hljs-string">&quot;peer0&quot;</span> <span class="hljs-string">&quot;peer1&quot;</span>)
+    <span class="hljs-keyword">for</span> peer <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${peers[@]}</span>&quot;</span>
+    <span class="hljs-keyword">do</span>
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: <span class="hljs-variable">$namespace</span>
+  name: fabric-<span class="hljs-variable">$peer</span>
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: fabric-<span class="hljs-variable">$peer</span>
+    spec:
+      containers:
+      - name: couchdb
+        image: registry.docker-cn.com/hyperledger/fabric-couchdb:x86_64-1.0.0
+        ports:
+         - containerPort: 5984
+
+      - name: peer
+        image: registry.docker-cn.com/hyperledger/fabric-peer:x86_64-1.1.0
+        env:
+        - name: CORE_LEDGER_STATE_STATEDATABASE
+          value: \&quot;CouchDB\&quot;
+        - name: CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS
+          value: \&quot;localhost:5984\&quot;
+        - name: CORE_VM_ENDPOINT
+          value: \&quot;unix:///host/var/run/docker.sock\&quot;
+        - name: CORE_LOGGING_LEVEL
+          value: \&quot;DEBUG\&quot;
+        - name: CORE_PEER_TLS_ENABLED
+          value: \&quot;false\&quot;
+        - name: CORE_PEER_GOSSIP_USELEADERELECTION
+          value: \&quot;true\&quot;
+        - name: CORE_PEER_GOSSIP_ORGLEADER
+          value: \&quot;false\&quot; 
+        - name: CORE_PEER_PROFILE_ENABLED
+          value: \&quot;true\&quot;
+        - name: CORE_PEER_TLS_CERT_FILE
+          value: \&quot;/etc/hyperledger/fabric/tls/server.crt\&quot; 
+        - name: CORE_PEER_TLS_KEY_FILE
+          value: \&quot;/etc/hyperledger/fabric/tls/server.key\&quot;
+        - name: CORE_PEER_TLS_ROOTCERT_FILE
+          value: \&quot;/etc/hyperledger/fabric/tls/ca.crt\&quot;
+        - name: CORE_PEER_ID
+          value: <span class="hljs-variable">$peer</span>.<span class="hljs-variable">$namespace</span>
+        - name: CORE_PEER_ADDRESS
+          value: 0.0.0.0:7051
+        - name: CORE_PEER_GOSSIP_EXTERNALENDPOINT
+          value: <span class="hljs-variable">$peer</span>.<span class="hljs-variable">$namespace</span>:7051
+        - name: CORE_PEER_LOCALMSPID
+          value: Org<span class="hljs-variable">${org_id}</span>MSP
+        ports:
+         - containerPort: 7051
+         - containerPort: 7052
+         - containerPort: 7053
+        command: [\&quot;peer\&quot;]
+        args: [\&quot;node\&quot;,\&quot;start\&quot;]
+        volumeMounts:
+         - mountPath: /etc/hyperledger/fabric/msp 
+           name: certificate
+           subPath: crypto-config/peerOrganizations/<span class="hljs-variable">$namespace</span>/peers/<span class="hljs-variable">$peer</span>.<span class="hljs-variable">$namespace</span>/msp
+         - mountPath: /etc/hyperledger/fabric/tls
+           name: certificate
+           subPath: crypto-config/peerOrganizations/<span class="hljs-variable">$namespace</span>/peers/<span class="hljs-variable">$peer</span>.<span class="hljs-variable">$namespace</span>/tls
+         - mountPath: /host/var/run/
+           name: run
+      volumes:
+       - name: certificate
+         persistentVolumeClaim:
+             claimName: fabric-pvc-for-<span class="hljs-variable">$namespace</span>
+       - name: run
+         hostPath:
+           path: /run
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+   namespace: <span class="hljs-variable">$namespace</span>
+   name: <span class="hljs-variable">$peer</span>
+spec:
+ selector:
+   name: fabric-<span class="hljs-variable">$peer</span>
+ ports:
+   - name: externale-listen-endpoint
+     protocol: TCP
+     port: 7051
+     targetPort: 7051
+
+   - name: chaincode-listen
+     protocol: TCP
+     port: 7052
+     targetPort: 7052
+
+---
+&quot;</span> | kubectl create  <span class="hljs-_">-f</span> - 
+    <span class="hljs-keyword">done</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<h2 id="&#x8FD0;&#x884C;&#x793A;&#x4F8B;-chaincode">&#x8FD0;&#x884C;&#x793A;&#x4F8B; chaincode</h2>
+<h3 id="&#x521B;&#x5EFA;-test-channel-&#x5E76;&#x628A;&#x6240;&#x6709;-peer-&#x52A0;&#x5165;">&#x521B;&#x5EFA; test-channel, &#x5E76;&#x628A;&#x6240;&#x6709; peer &#x52A0;&#x5165;</h3>
+<p>&#x8FDB;&#x5165; fabric-tools pod &#x6267;&#x884C;</p>
+<pre><code class="lang-bash">CHANNEL_NAME=<span class="hljs-built_in">test</span>-channel
+<span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span>
+<span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/crypto-config/peerOrganizations/fabric-org-1/users/Admin@fabric-org-1/msp
+peer channel create \
+    -o orderer.fabric-orderer:7050 \
+    -c <span class="hljs-variable">${CHANNEL_NAME}</span> \
+    <span class="hljs-_">-f</span> <span class="hljs-built_in">test</span>-channel.tx 
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x6210;&#x529F;&#x672C;&#x5730;&#x751F;&#x6210; test-channel.block</span>
+
+
+
+<span class="hljs-comment"># &#x628A;4&#x4E2A;&#x7ED3;&#x70B9;&#x90FD;&#x52A0;&#x5165; channel</span>
+<span class="hljs-built_in">declare</span> <span class="hljs-_">-a</span> orgIds=(<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-string">&quot;2&quot;</span>)
+<span class="hljs-keyword">for</span> org_id <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${orgIds[@]}</span>&quot;</span>
+<span class="hljs-keyword">do</span>
+    orgDomain=fabric-org-<span class="hljs-variable">${org_id}</span>
+    <span class="hljs-built_in">declare</span> <span class="hljs-_">-a</span> peers=(<span class="hljs-string">&quot;peer0&quot;</span> <span class="hljs-string">&quot;peer1&quot;</span>)
+    <span class="hljs-keyword">for</span> peer <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${peers[@]}</span>&quot;</span>
+    <span class="hljs-keyword">do</span>
+    <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org<span class="hljs-variable">${org_id}</span>MSP&quot;</span> 
+    <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/crypto-config/peerOrganizations/<span class="hljs-variable">${orgDomain}</span>/users/Admin@<span class="hljs-variable">${orgDomain}</span>/msp 
+    <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=<span class="hljs-variable">$peer</span>.<span class="hljs-variable">${orgDomain}</span>:7051
+    peer channel join -b <span class="hljs-built_in">test</span>-channel.block
+    <span class="hljs-keyword">done</span>
+<span class="hljs-keyword">done</span>
+
+
+<span class="hljs-comment"># &#x66F4;&#x65B0;&#x4E24;&#x4E2A;&#x7EC4;&#x7EC7;&#x7684;&#x951A;&#x70B9;&#x4FE1;&#x606F;</span>
+<span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span> 
+<span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/crypto-config/peerOrganizations/fabric-org-1/users/Admin@fabric-org-1/msp 
+<span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.fabric-org-1:7051
+peer channel update -o orderer.fabric-orderer:7050 \
+    -c <span class="hljs-built_in">test</span>-channel \
+    <span class="hljs-_">-f</span> Org1MSPanchors.tx
+
+<span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org2MSP&quot;</span> 
+<span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/crypto-config/peerOrganizations/fabric-org-2/users/Admin@fabric-org-2/msp 
+<span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.fabric-org-2:7051
+peer channel update -o orderer.fabric-orderer:7050 \
+    -c <span class="hljs-built_in">test</span>-channel \
+    <span class="hljs-_">-f</span> Org2MSPanchors.tx
+</code></pre>
+<h2 id="&#x6D4B;&#x8BD5;&#x7F51;&#x7EDC;">&#x6D4B;&#x8BD5;&#x7F51;&#x7EDC;</h2>
+<p>&#x8FDB;&#x5165; fabric-tools pod &#x7684;&#x63A7;&#x5236;&#x53F0;</p>
+<pre><code>kubectl exec -it fabric-tools-xxx bash
+</code></pre><pre><code class="lang-bash"><span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span> 
+<span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/crypto-config/peerOrganizations/fabric-org-1/users/Admin@fabric-org-1/msp 
+<span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.fabric-org-1:7051
+
+<span class="hljs-comment">#&#x4E0B;&#x8F7D; hyperledger/fabric &#x6E90;&#x7801;</span>
+git <span class="hljs-built_in">clone</span> https://github.com/hyperledger/fabric.git /opt/gopath/src/github.com/hyperledger/fabric
+
+<span class="hljs-comment"># &#x5B89;&#x88C5;&#x6D4B;&#x8BD5;&#x94FE;&#x7801;</span>
+peer chaincode install \
+    -n <span class="hljs-built_in">test</span>-cc \
+    -v 1.0 \
+    -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
+
+<span class="hljs-comment"># &#x5B9E;&#x4F8B;&#x5316;&#x94FE;&#x7801;</span>
+<span class="hljs-comment"># a &#x521D;&#x59CB;&#x4F59;&#x989D;&#x4E3A; 100</span>
+<span class="hljs-comment"># b &#x521D;&#x59CB;&#x4F59;&#x989D;&#x4E3A; 200</span>
+peer chaincode instantiate \
+    -o orderer.fabric-orderer:7050 \
+    -C <span class="hljs-built_in">test</span>-channel-1 \
+    -n <span class="hljs-built_in">test</span>-cc \
+    -v 1.0 \
+    -c <span class="hljs-string">&apos;{&quot;Args&quot;:[&quot;init&quot;,&quot;a&quot;,&quot;100&quot;,&quot;b&quot;,&quot;200&quot;]}&apos;</span> \
+    -P <span class="hljs-string">&quot;OR(&apos;Org1MSP.member&apos;,&apos;Org2MSP.member&apos;)&quot;</span>
+
+<span class="hljs-comment"># &#x6267;&#x884C;&#x94FE;&#x7801;</span>
+<span class="hljs-comment"># &#x4ECE; a &#x7684;&#x4F59;&#x989D;&#x91CC;&#x8F6C; 10 &#x5230; b</span>
+peer chaincode invoke \
+    -o orderer.fabric-orderer:7050 \
+    -C <span class="hljs-built_in">test</span>-channel-1 \
+    -n <span class="hljs-built_in">test</span>-cc \
+    -c <span class="hljs-string">&apos;{&quot;Args&quot;:[&quot;invoke&quot;,&quot;a&quot;,&quot;b&quot;,&quot;10&quot;]}&apos;</span>
+
+<span class="hljs-comment"># &#x67E5;&#x8BE2; a &#x7684;&#x4F59;&#x989D;</span>
+peer chaincode query \
+    -C <span class="hljs-built_in">test</span>-channel-1 \
+    -n <span class="hljs-built_in">test</span>-cc \
+    -c <span class="hljs-string">&apos;{&quot;Args&quot;:[&quot;query&quot;,&quot;a&quot;]}&apos;</span>
+
+<span class="hljs-comment"># &#x67E5;&#x8BE2; b &#x7684;&#x4F59;&#x989D;</span>
+peer chaincode query \
+    -C <span class="hljs-built_in">test</span>-channel-1 \
+    -n <span class="hljs-built_in">test</span>-cc \
+    -c <span class="hljs-string">&apos;{&quot;Args&quot;:[&quot;query&quot;,&quot;b&quot;]}&apos;</span>
+</code></pre>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl.getElementsByTagName('a').length>0){targetUl.className='toc';}</script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="concept.html" class="navigation navigation-prev " aria-label="Previous page: 概念">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../data-process/dimension-reduction/DEFAULT.html" class="navigation navigation-next " aria-label="Next page: 降维">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"在 kubernetes 上搭建 hyperledger-fabric","level":"2.1.4","depth":2,"next":{"title":"降维","level":"3.1","depth":1,"path":"data-process/dimension-reduction/DEFAULT.md","ref":"data-process/dimension-reduction/DEFAULT.md","articles":[{"title":"LDA.md","level":"3.1.1","depth":2,"path":"data-process/dimension-reduction/LDA.md","ref":"data-process/dimension-reduction/LDA.md","articles":[]},{"title":"PCA 主成份分析","level":"3.1.2","depth":2,"path":"data-process/dimension-reduction/PCA.md","ref":"data-process/dimension-reduction/PCA.md","articles":[]}]},"previous":{"title":"概念","level":"2.1.3","depth":2,"path":"blockchain/hyperledger-fabric/concept.md","ref":"blockchain/hyperledger-fabric/concept.md","articles":[]},"dir":"ltr"},"config":{"plugins":["alerts","expandable-chapters-interactive","mathjax","toc","-lunr","-search","search-plus-mod"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toc":{"addClass":true,"className":"toc"},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"sepia","family":"serif","size":1},"highlight":{},"expandable-chapters-interactive":{},"search-plus-mod":{},"alerts":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"note by zimmem","links":{"sidebar":{"Custom link name":"https://zimmem.com"},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":"notebook ","theme-default":{"showLevel":true},"extension":null},"file":{"path":"blockchain/hyperledger-fabric/deploy-fabric-on-kubernetes.md","mtime":"2019-05-24T02:41:10.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T02:42:21.474Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus-mod/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus-mod/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

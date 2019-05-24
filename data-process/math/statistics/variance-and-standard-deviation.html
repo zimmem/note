@@ -1,0 +1,1848 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title># 方差与标准差 · note by zimmem</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-plus-mod/search-mod.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../mathjax-demo.html" />
+    
+    
+    <link rel="prev" href="basic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://zimmem.com" target="_blank" class="custom-link">Custom link name</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">大数据运维</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../big-data-platform-ops/cdh/DEFAULT.html">
+            
+                <a href="../../../big-data-platform-ops/cdh/DEFAULT.html">
+            
+                    
+                    cdh
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../big-data-platform-ops/cdh/create-cloudera-manager-extensions.html">
+            
+                <a href="../../../big-data-platform-ops/cdh/create-cloudera-manager-extensions.html">
+            
+                    
+                    Create Cloudera Manager extensions 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../big-data-platform-ops/cdh/create-custom-cloudera-add-on-service.html">
+            
+                <a href="../../../big-data-platform-ops/cdh/create-custom-cloudera-add-on-service.html">
+            
+                    
+                    Create Custom Cloudera Add-on Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../big-data-platform-ops/cdh/create-custom-repository.html">
+            
+                <a href="../../../big-data-platform-ops/cdh/create-custom-repository.html">
+            
+                    
+                    Create Custom Repository 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../../big-data-platform-ops/cdh/extjs-dependency-by-oozie.html">
+            
+                <a href="../../../big-data-platform-ops/cdh/extjs-dependency-by-oozie.html">
+            
+                    
+                    extjs-dependency-by-oozie.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../../big-data-platform-ops/cdh/install-cdh-on-ubuntu-16.html">
+            
+                <a href="../../../big-data-platform-ops/cdh/install-cdh-on-ubuntu-16.html">
+            
+                    
+                    install-cdh-on-ubuntu-16.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../../big-data-platform-ops/cdh/install-cloudera-manager-on-centos-6.html">
+            
+                <a href="../../../big-data-platform-ops/cdh/install-cloudera-manager-on-centos-6.html">
+            
+                    
+                    Install Cloudera Manager on CentOS 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../../big-data-platform-ops/cdh/install-cm-on-ubuntu-16.html">
+            
+                <a href="../../../big-data-platform-ops/cdh/install-cm-on-ubuntu-16.html">
+            
+                    
+                    Install Cloudera Manager on Ubuntu 16
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../../big-data-platform-ops/cdh/readwrite-hive-table-when-running-spark2-by-oozie.html">
+            
+                <a href="../../../big-data-platform-ops/cdh/readwrite-hive-table-when-running-spark2-by-oozie.html">
+            
+                    
+                    Read/Write hive table when running spark2 by oozie
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    hadoop
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../big-data-platform-ops/hadoop/hdfs.html">
+            
+                <a href="../../../big-data-platform-ops/hadoop/hdfs.html">
+            
+                    
+                    hdfs.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../big-data-platform-ops/hadoop/resource-configuration.html">
+            
+                <a href="../../../big-data-platform-ops/hadoop/resource-configuration.html">
+            
+                    
+                    Resource Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    hbase
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../big-data-platform-ops/hbase/">
+            
+                <a href="../../../big-data-platform-ops/hbase/">
+            
+                    
+                    README.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    hive
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../big-data-platform-ops/hive/">
+            
+                <a href="../../../big-data-platform-ops/hive/">
+            
+                    
+                    README.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    impala
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../../big-data-platform-ops/impala/maintenance-instructions.html">
+            
+                <a href="../../../big-data-platform-ops/impala/maintenance-instructions.html">
+            
+                    
+                    Impala Maintenance Instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    spark
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../big-data-platform-ops/spark/cvc.html">
+            
+                <a href="../../../big-data-platform-ops/spark/cvc.html">
+            
+                    
+                    cvc.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../../big-data-platform-ops/spark/spark-dataframe-join.html">
+            
+                <a href="../../../big-data-platform-ops/spark/spark-dataframe-join.html">
+            
+                    
+                    Spark DataFrame Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../../big-data-platform-ops/spark/spark-shell.html">
+            
+                <a href="../../../big-data-platform-ops/spark/spark-shell.html">
+            
+                    
+                    Spark Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../../big-data-platform-ops/spark/spark-submit.html">
+            
+                <a href="../../../big-data-platform-ops/spark/spark-submit.html">
+            
+                    
+                    Spark Submit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../../big-data-platform-ops/apache-ambari-installation.html">
+            
+                <a href="../../../big-data-platform-ops/apache-ambari-installation.html">
+            
+                    
+                    Apache Ambari Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../../big-data-platform-ops/big-data-platform-ops.html">
+            
+                <a href="../../../big-data-platform-ops/big-data-platform-ops.html">
+            
+                    
+                    big-data-platform-ops.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../../big-data-platform-ops/hdp.html">
+            
+                <a href="../../../big-data-platform-ops/hdp.html">
+            
+                    
+                    hdp.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">区块链</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    hyperledger-fabric
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" >
+            
+                <span>
+            
+                    
+                    img
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../../blockchain/hyperledger-fabric/block-struct.html">
+            
+                <a href="../../../blockchain/hyperledger-fabric/block-struct.html">
+            
+                    
+                    Block Struct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../../blockchain/hyperledger-fabric/concept.html">
+            
+                <a href="../../../blockchain/hyperledger-fabric/concept.html">
+            
+                    
+                    概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../../blockchain/hyperledger-fabric/deploy-fabric-on-kubernetes.html">
+            
+                <a href="../../../blockchain/hyperledger-fabric/deploy-fabric-on-kubernetes.html">
+            
+                    
+                    在 kubernetes 上搭建 hyperledger-fabric
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据处理</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../dimension-reduction/DEFAULT.html">
+            
+                <a href="../../dimension-reduction/DEFAULT.html">
+            
+                    
+                    降维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../dimension-reduction/LDA.html">
+            
+                <a href="../../dimension-reduction/LDA.html">
+            
+                    
+                    LDA.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../dimension-reduction/PCA.html">
+            
+                <a href="../../dimension-reduction/PCA.html">
+            
+                    
+                    PCA 主成份分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    machine-learning
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../machine-learning/study-resource.html">
+            
+                <a href="../../machine-learning/study-resource.html">
+            
+                    
+                    机器学习资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../DEFAULT.html">
+            
+                <a href="../DEFAULT.html">
+            
+                    
+                    数学知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="DEFAULT.html">
+            
+                <a href="DEFAULT.html">
+            
+                    
+                    统计学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1.1" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3.1.2" data-path="variance-and-standard-deviation.html">
+            
+                <a href="variance-and-standard-deviation.html">
+            
+                    
+                    # 方差与标准差
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../mathjax-demo.html">
+            
+                <a href="../mathjax-demo.html">
+            
+                    
+                    Mathjax Demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../matrix.html">
+            
+                <a href="../matrix.html">
+            
+                    
+                    矩阵知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    recomand-system
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../recomand-system/atricles-and-systems.html">
+            
+                <a href="../../recomand-system/atricles-and-systems.html">
+            
+                    
+                    推荐系统相关文章与开源方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    tensorflow
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" >
+            
+                <span>
+            
+                    
+                    images
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="../../tensorflow/optimizer -compare.html">
+            
+                <a href="../../tensorflow/optimizer -compare.html">
+            
+                    
+                    Optimizer Compare
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../top-10-data-mining-algorithm/DEFAULT.html">
+            
+                <a href="../../top-10-data-mining-algorithm/DEFAULT.html">
+            
+                    
+                    十大数据挖掘数法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" >
+            
+                <span>
+            
+                    
+                    math
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1.1" data-path="../../top-10-data-mining-algorithm/math/least-squares.html">
+            
+                <a href="../../top-10-data-mining-algorithm/math/least-squares.html">
+            
+                    
+                    最小二乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../../top-10-data-mining-algorithm/AdaBoost.html">
+            
+                <a href="../../top-10-data-mining-algorithm/AdaBoost.html">
+            
+                    
+                    AdaBoost.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3" data-path="../../top-10-data-mining-algorithm/Apriori.html">
+            
+                <a href="../../top-10-data-mining-algorithm/Apriori.html">
+            
+                    
+                    Apriori.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4" data-path="../../top-10-data-mining-algorithm/C4.5.html">
+            
+                <a href="../../top-10-data-mining-algorithm/C4.5.html">
+            
+                    
+                    数据挖掘十大经典算法之 C4.5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.5" data-path="../../top-10-data-mining-algorithm/CART.html">
+            
+                <a href="../../top-10-data-mining-algorithm/CART.html">
+            
+                    
+                    CART.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.6" data-path="../../top-10-data-mining-algorithm/EM.html">
+            
+                <a href="../../top-10-data-mining-algorithm/EM.html">
+            
+                    
+                    EM.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.7" data-path="../../top-10-data-mining-algorithm/Naive-Baye.html">
+            
+                <a href="../../top-10-data-mining-algorithm/Naive-Baye.html">
+            
+                    
+                    Naive-Baye.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.8" data-path="../../top-10-data-mining-algorithm/PageRank.html">
+            
+                <a href="../../top-10-data-mining-algorithm/PageRank.html">
+            
+                    
+                    PageRank.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.9" data-path="../../top-10-data-mining-algorithm/Svm.html">
+            
+                <a href="../../top-10-data-mining-algorithm/Svm.html">
+            
+                    
+                    Svm.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.10" data-path="../../top-10-data-mining-algorithm/k-means.html">
+            
+                <a href="../../top-10-data-mining-algorithm/k-means.html">
+            
+                    
+                    k-means.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.11" data-path="../../top-10-data-mining-algorithm/kNN.html">
+            
+                <a href="../../top-10-data-mining-algorithm/kNN.html">
+            
+                    
+                    kNN.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.12" data-path="../../top-10-data-mining-algorithm/top-10-data-mining-algorithm.html">
+            
+                <a href="../../top-10-data-mining-algorithm/top-10-data-mining-algorithm.html">
+            
+                    
+                    top-10-data-mining-algorithm.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据仓库</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../data-warehouse/wen-zhang-zhai-xuan.html">
+            
+                <a href="../../../data-warehouse/wen-zhang-zhai-xuan.html">
+            
+                    
+                    Articles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">运维开发</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../../devops/docker/an-zhuang-hou-mian-sudo.html">
+            
+                <a href="../../../devops/docker/an-zhuang-hou-mian-sudo.html">
+            
+                    
+                    安装后免 sudo 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <span>
+            
+                    
+                    gong-ju
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../../devops/gong-ju/install-latest-git-version-on-centos.html">
+            
+                <a href="../../../devops/gong-ju/install-latest-git-version-on-centos.html">
+            
+                    
+                    install-latest-git-version-on-centos.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <span>
+            
+                    
+                    linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" >
+            
+                <span>
+            
+                    
+                    images
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../../../devops/linux/iptables.html">
+            
+                <a href="../../../devops/linux/iptables.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.3" data-path="../../../devops/linux/performance-diagnosis.html">
+            
+                <a href="../../../devops/linux/performance-diagnosis.html">
+            
+                    
+                    performance-diagnosis.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.4" data-path="../../../devops/linux/shell-syntax.html">
+            
+                <a href="../../../devops/linux/shell-syntax.html">
+            
+                    
+                    Shell Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.5" data-path="../../../devops/linux/ssh-with-kerberos.html">
+            
+                <a href="../../../devops/linux/ssh-with-kerberos.html">
+            
+                    
+                    SSH with Kerbors5 on Ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.6" data-path="../../../devops/linux/wget.html">
+            
+                <a href="../../../devops/linux/wget.html">
+            
+                    
+                    wget 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" >
+            
+                <span>
+            
+                    
+                    network
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.4.1" data-path="../../../devops/network/install-merlin-on-asus-router.html">
+            
+                <a href="../../../devops/network/install-merlin-on-asus-router.html">
+            
+                    
+                    install-merlin-on-asus-router.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../../../devops/docker.html">
+            
+                <a href="../../../devops/docker.html">
+            
+                    
+                    docker.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../../../devops/linux.html">
+            
+                <a href="../../../devops/linux.html">
+            
+                    
+                    Performance diagnosis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发语言与框架</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <span>
+            
+                    
+                    dubbo
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../../langue-and-frameworks/dubbo/">
+            
+                <a href="../../../langue-and-frameworks/dubbo/">
+            
+                    
+                    README.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <span>
+            
+                    
+                    java
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" >
+            
+                <span>
+            
+                    
+                    mybatis
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" >
+            
+                <span>
+            
+                    
+                    spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.2.1" >
+            
+                <span>
+            
+                    
+                    spring-mvc
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.2.1.1" data-path="../../../langue-and-frameworks/java/spring/spring-mvc/zi-ding-yi-can-shu-jie-xi.html">
+            
+                <a href="../../../langue-and-frameworks/java/spring/spring-mvc/zi-ding-yi-can-shu-jie-xi.html">
+            
+                    
+                    扩展点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2.2" data-path="../../../langue-and-frameworks/java/spring/chang-yong-kuo-zhan.html">
+            
+                <a href="../../../langue-and-frameworks/java/spring/chang-yong-kuo-zhan.html">
+            
+                    
+                    常用扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2.3" data-path="../../../langue-and-frameworks/java/spring/spring-mvc.html">
+            
+                <a href="../../../langue-and-frameworks/java/spring/spring-mvc.html">
+            
+                    
+                    Srping MVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../../../langue-and-frameworks/java/how-to-use-g1-garbage-collector.html">
+            
+                <a href="../../../langue-and-frameworks/java/how-to-use-g1-garbage-collector.html">
+            
+                    
+                    How to use G1 garbage collector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../../../langue-and-frameworks/java/print-gc-log.html">
+            
+                <a href="../../../langue-and-frameworks/java/print-gc-log.html">
+            
+                    
+                    How to Print GC log
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="../../../langue-and-frameworks/java/spring.html">
+            
+                <a href="../../../langue-and-frameworks/java/spring.html">
+            
+                    
+                    spring.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <span>
+            
+                    
+                    nodejs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../../langue-and-frameworks/nodejs/pei-zhiregistry-jing-xiang-huo-dai-li.html">
+            
+                <a href="../../../langue-and-frameworks/nodejs/pei-zhiregistry-jing-xiang-huo-dai-li.html">
+            
+                    
+                    npm 配置 registry 镜像或代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <span>
+            
+                    
+                    spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../../../langue-and-frameworks/spring/">
+            
+                <a href="../../../langue-and-frameworks/spring/">
+            
+                    
+                    配置项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.2" data-path="../../../langue-and-frameworks/spring/maintenance-instructions.html">
+            
+                <a href="../../../langue-and-frameworks/spring/maintenance-instructions.html">
+            
+                    
+                    Hive Maintenance Instructions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.3" data-path="../../../langue-and-frameworks/spring/xxx.html">
+            
+                <a href="../../../langue-and-frameworks/spring/xxx.html">
+            
+                    
+                    xxx.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">存储系统</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" >
+            
+                <span>
+            
+                    
+                    mongodb
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../../storage-system/mongodb/">
+            
+                <a href="../../../storage-system/mongodb/">
+            
+                    
+                    README.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" >
+            
+                <span>
+            
+                    
+                    mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" >
+            
+                <span>
+            
+                    
+                    operation
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1.1" data-path="../../../storage-system/mysql/operation/import-export.html">
+            
+                <a href="../../../storage-system/mysql/operation/import-export.html">
+            
+                    
+                    数据导入导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="../../../storage-system/mysql/install-by-yum.html">
+            
+                <a href="../../../storage-system/mysql/install-by-yum.html">
+            
+                    
+                    Install Mysql Server by Yum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="../../../storage-system/mysql/mysql-diff.html">
+            
+                <a href="../../../storage-system/mysql/mysql-diff.html">
+            
+                    
+                    mysql-diff.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.4" data-path="../../../storage-system/mysql/settings.html">
+            
+                <a href="../../../storage-system/mysql/settings.html">
+            
+                    
+                    Mysql Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.5" data-path="../../../storage-system/mysql/user-manager.html">
+            
+                <a href="../../../storage-system/mysql/user-manager.html">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." ># 方差与标准差</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x65B9;&#x5DEE;&#x4E0E;&#x6807;&#x51C6;&#x5DEE;">&#x65B9;&#x5DEE;&#x4E0E;&#x6807;&#x51C6;&#x5DEE;</h2>
+<h2 id="&#x65B9;&#x5DEE;-&#xFF08;variance&#xFF09;">&#x65B9;&#x5DEE; &#xFF08;Variance&#xFF09;</h2>
+<blockquote>
+<p>&#x65B9;&#x5DEE;&#xFF08;Variance&#xFF09;&#xFF0C;&#x5E94;&#x7528;&#x6570;&#x5B66;&#x91CC;&#x7684;&#x4E13;&#x6709;&#x540D;&#x8BCD;&#x3002;&#x5728;&#x6982;&#x7387;&#x8BBA;&#x548C;&#x7EDF;&#x8BA1;&#x5B66;&#x4E2D;&#xFF0C;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x5DEE;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x5B83;&#x7684;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BE5;&#x53D8;&#x91CF;&#x79BB;&#x5176;&#x671F;&#x671B;&#x503C;&#x7684;&#x8DDD;&#x79BB;&#x3002;&#x4E00;&#x4E2A;&#x5B9E;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x5DEE;&#x4E5F;&#x79F0;&#x4E3A;&#x5B83;&#x7684;&#x4E8C;&#x9636;&#x77E9;&#x6216;&#x4E8C;&#x9636;&#x4E2D;&#x5FC3;&#x52A8;&#x5DEE;&#xFF0C;&#x6070;&#x5DE7;&#x4E5F;&#x662F;&#x5B83;&#x7684;&#x4E8C;&#x9636;&#x7D2F;&#x79EF;&#x91CF;&#x3002;&#x8FD9;&#x91CC;&#x628A;&#x590D;&#x6742;&#x8BF4;&#x767D;&#x4E86;&#xFF0C;&#x5C31;&#x662F;&#x5C06;&#x5404;&#x4E2A;&#x8BEF;&#x5DEE;&#x5C06;&#x4E4B;&#x5E73;&#x65B9;&#xFF08;&#x800C;&#x975E;&#x53D6;&#x7EDD;&#x5BF9;&#x503C;&#xFF0C;&#x4F7F;&#x4E4B;&#x80AF;&#x5B9A;&#x4E3A;&#x6B63;&#x6570;&#xFF09;&#xFF0C;&#x76F8;&#x52A0;&#x4E4B;&#x540E;&#x518D;&#x9664;&#x4EE5;&#x603B;&#x6570;&#xFF0C;&#x900F;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7B97;&#x51FA;&#x5404;&#x4E2A;&#x6570;&#x636E;&#x5206;&#x5E03;&#x3001;&#x96F6;&#x6563;&#xFF08;&#x76F8;&#x5BF9;&#x4E2D;&#x5FC3;&#x70B9;&#xFF09;&#x7684;&#x7A0B;&#x5EA6;&#x3002;&#x7EE7;&#x7EED;&#x5EF6;&#x4F38;&#x7684;&#x8BDD;&#xFF0C;&#x65B9;&#x5DEE;&#x7684;&#x7B97;&#x672F;&#x5E73;&#x65B9;&#x6839;&#x79F0;&#x4E3A;&#x8BE5;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x7684;&#x6807;&#x51C6;&#x5DEE;&#xFF08;&#x6B64;&#x4E3A;&#x76F8;&#x5BF9;&#x5404;&#x4E2A;&#x6570;&#x636E;&#x70B9;&#x95F4;&#xFF09;&#x3002; -- (<a href="https://zh.wikipedia.org/wiki/%E6%96%B9%E5%B7%AE" target="_blank">https://zh.wikipedia.org/wiki/%E6%96%B9%E5%B7%AE</a>)</p>
+</blockquote>
+<h3 id="&#x57FA;&#x672C;&#x5B9A;&#x4E49;">&#x57FA;&#x672C;&#x5B9A;&#x4E49;</h3>
+<p><script type="math/tex; ">
+Var(X) =\frac{1}{N} \sum^N_{i=1}(x_i - \mu)^2
+</script></p>
+<h2 id="&#x6807;&#x51C6;&#x5DEE;&#xFF08;standard-deviation&#xFF09;">&#x6807;&#x51C6;&#x5DEE;&#xFF08;Standard Deviation&#xFF09;</h2>
+<blockquote>
+<p>&#x6807;&#x51C6;&#x5DEE;&#xFF08;&#x53C8;&#x79F0;&#x6807;&#x51C6;&#x504F;&#x5DEE;&#x3001;&#x5747;&#x65B9;&#x5DEE;&#xFF0C;&#x82F1;&#x8BED;&#xFF1A;Standard Deviation&#xFF0C;&#x7F29;&#x5199;SD&#xFF09;&#xFF0C;&#x6570;&#x5B66;&#x7B26;&#x53F7;&#x3C3;&#xFF08;sigma&#xFF09;&#xFF0C;&#x5728;&#x6982;&#x7387;&#x7EDF;&#x8BA1;&#x4E2D;&#x6700;&#x5E38;&#x4F7F;&#x7528;&#x4F5C;&#x4E3A;&#x6D4B;&#x91CF;&#x4E00;&#x7EC4;&#x6570;&#x503C;&#x7684;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#x4E4B;&#x7528;&#x3002;&#x6807;&#x51C6;&#x5DEE;&#x5B9A;&#x4E49;&#xFF1A;&#x4E3A;&#x65B9;&#x5DEE;&#x5F00;&#x7B97;&#x672F;&#x5E73;&#x65B9;&#x6839;&#xFF0C;&#x53CD;&#x6620;&#x7EC4;&#x5185;&#x4E2A;&#x4F53;&#x95F4;&#x7684;&#x79BB;&#x6563;&#x7A0B;&#x5EA6;&#xFF1B;&#x6807;&#x51C6;&#x5DEE;&#x4E0E;&#x671F;&#x671B;&#x503C;&#x4E4B;&#x6BD4;&#x4E3A;&#x6807;&#x51C6;&#x79BB;&#x5DEE;&#x7387;&#x3002; --&#xFF08;<a href="https://zh.wikipedia.org/wiki/%E6%A8%99%E6%BA%96%E5%B7%AE&#xFF09;" target="_blank">https://zh.wikipedia.org/wiki/%E6%A8%99%E6%BA%96%E5%B7%AE&#xFF09;</a></p>
+</blockquote>
+<h3 id="&#x57FA;&#x672C;&#x5B9A;&#x4E49;">&#x57FA;&#x672C;&#x5B9A;&#x4E49;</h3>
+<p><script type="math/tex; ">
+SD=\sqrt{ \frac{1}{N} \sum^N_{i=1}(x_i - \mu)^2 }
+</script></p>
+<h2 id="&#x534F;&#x65B9;&#x5DEE;">&#x534F;&#x65B9;&#x5DEE;</h2>
+<blockquote>
+<p>&#x534F;&#x65B9;&#x5DEE;&#xFF08;Covariance&#xFF09;&#x5728;&#x6982;&#x7387;&#x8BBA;&#x548C;&#x7EDF;&#x8BA1;&#x5B66;&#x4E2D;&#x7528;&#x4E8E;&#x8861;&#x91CF;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x603B;&#x4F53;&#x8BEF;&#x5DEE;&#x3002;&#x800C;&#x65B9;&#x5DEE;&#x662F;&#x534F;&#x65B9;&#x5DEE;&#x7684;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#xFF0C;&#x5373;&#x5F53;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x76F8;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x3002; --&#xFF08;<a href="https://zh.wikipedia.org/wiki/&#x534F;&#x65B9;&#x5DEE;&#xFF09;" target="_blank">https://zh.wikipedia.org/wiki/&#x534F;&#x65B9;&#x5DEE;&#xFF09;</a></p>
+</blockquote>
+<p>&#x671F;&#x671B;&#x503C;&#x5206;&#x522B;&#x4E3A;$E(X)=\mu$ &#x4E0E; $E(Y)=\nu$&#x7684;&#x4E24;&#x4E2A;&#x5177;&#x6709;&#x6709;&#x9650;&#x4E8C;&#x9636;&#x77E9;&#x7684;&#x5B9E;&#x6570;&#x968F;&#x673A;&#x53D8;&#x91CF;X &#x4E0E;Y &#x4E4B;&#x95F4;&#x7684;&#x534F;&#x65B9;&#x5DEE;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;</p>
+<p><script type="math/tex; "> 
+cov(X,Y) = E((X-\mu)(Y-v)) = E(X \cdot Y )-\mu v
+</script></p>
+<blockquote>
+<p>&#x534F;&#x65B9;&#x5DEE;&#x53EF;&#x4EE5;&#x5206;&#x6790;&#x6837;&#x672C;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#x7684;&#x7EBF;&#x6027;&#x76F8;&#x5173;&#x6027;&#xFF0C;&#x534F;&#x65B9;&#x5DEE;&#x4E3A;&#x6B63;&#x6570;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x8868;&#x793A;&#x76F8;&#x5173;&#xFF0C;&#x534F;&#x65B9;&#x5DEE;&#x4E3A;&#x8D1F;&#x6570;&#x7684;&#x65F6;&#x5019;&#x5219;&#x8868;&#x793A;&#x4E0D;&#x76F8;&#x5173;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x76F8;&#x5173;&#x6027;&#x8BA1;&#x7B97;&#x5C31;&#x662F;&#x57FA;&#x4E8E;&#x534F;&#x65B9;&#x5DEE;&#x5B9E;&#x73B0;&#x3002;&#x5728;&#x56FE;&#x50CF;&#x7684;&#x76F4;&#x65B9;&#x56FE;&#x6570;&#x636E;&#x6BD4;&#x8F83;&#x4E2D;&#x662F;&#x5E38;&#x89C4;&#x7684;&#x624B;&#x6BB5;&#x4E4B;&#x4E00;&#x3002;OpenCV&#x4E0E;ImageJ&#x4E2D;&#x5747;&#x6709;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x3002; -- (<a href="https://blog.csdn.net/jia20003/article/details/72765439" target="_blank">https://blog.csdn.net/jia20003/article/details/72765439</a>)</p>
+</blockquote>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl.getElementsByTagName('a').length>0){targetUl.className='toc';}</script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="basic.html" class="navigation navigation-prev " aria-label="Previous page: 基础知识">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../mathjax-demo.html" class="navigation navigation-next " aria-label="Next page: Mathjax Demo">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"# 方差与标准差","level":"3.3.1.2","depth":3,"next":{"title":"Mathjax Demo","level":"3.3.2","depth":2,"path":"data-process/math/mathjax-demo.md","ref":"data-process/math/mathjax-demo.md","articles":[]},"previous":{"title":"基础知识","level":"3.3.1.1","depth":3,"path":"data-process/math/statistics/basic.md","ref":"data-process/math/statistics/basic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["alerts","expandable-chapters-interactive","mathjax","toc","-lunr","-search","search-plus-mod"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toc":{"addClass":true,"className":"toc"},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"sepia","family":"serif","size":1},"highlight":{},"expandable-chapters-interactive":{},"search-plus-mod":{},"alerts":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"note by zimmem","links":{"sidebar":{"Custom link name":"https://zimmem.com"},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":"notebook ","theme-default":{"showLevel":true},"extension":null},"file":{"path":"data-process/math/statistics/variance-and-standard-deviation.md","mtime":"2019-05-24T02:41:10.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T02:42:21.474Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-plus-mod/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-plus-mod/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
