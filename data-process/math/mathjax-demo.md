@@ -77,7 +77,7 @@ $$
 
 $$
 \left [
-    \begin {array} {cc|c}
+    \begin{array} {cc|c}
       1&2&3\\
       4&5&6
     \end {array}
@@ -91,3 +91,6 @@ $$
  这是行内矩阵 $$a = \bigl( \begin{smallmatrix}1 & 1\\ 0 & 1\end{smallmatrix}\bigr)$$
 
 
+```plot
+plot sin(1.6 ** x),1.6 ** x
+```

@@ -1,4 +1,4 @@
-# 矩阵知识
+# 矩阵知识 {matrix}
 
 ## 矩阵类型
 
@@ -25,10 +25,11 @@ a * \begin{bmatrix}
 \end{bmatrix} 
 =
 \begin{bmatrix}
-    x_1, x_2 \\
-    x_3, x_4 \\
+    ax_1, ax_2 \\
+    ax_3, ax_4 \\
 \end{bmatrix}
 $$
 
 ### 矩阵倒置ma
+
 
