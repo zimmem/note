@@ -36,8 +36,7 @@ S(\beta_{1}, \beta_{2})=&[6-(\beta_{1}+1 \beta_{2})]^{2} \\
 $$
 最小值可以通过对 $S(\beta _{1},\beta _{2})$ 分别求 $\beta_{1}$ 和 $\beta_{2}$ 的偏导数，然后使它们等于零得到。
 $$
-{\frac{\partial S}{\partial \beta_{1}} =0 =8 \beta_{1}+20 \beta_{2}-56} \\ 
-\\ 
+{\frac{\partial S}{\partial \beta_{1}} =0 =8 \beta_{1}+20 \beta_{2}-56} \\
 {\frac{\partial S}{\partial \beta_{2}} =0 =20 \beta_{1}+60 \beta_{2}-154}
 $$
 如此就得到了一个只有两个未知数的方程组，很容易就可以解出：

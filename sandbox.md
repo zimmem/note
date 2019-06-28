@@ -41,3 +41,7 @@ public class Hello{}
 ```plot
 plot sin(x)
 ```
+
+::: tip
+aaa
+:::

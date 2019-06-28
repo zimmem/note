@@ -65,7 +65,7 @@ public abstract class LauncherMain {
 ## 解决方法
 CDH -> Spark2 -> Configuration -> Spark 2 Client Advanced Configuration Snippet (Safety Valve) for spark2-conf/spark-env.sh 添加
 
-```
+```bash
 if [ -n "$SPARK_CONF_DIR/yarn-conf" ] && [ "$HADOOP_CONF_DIR" !=  "$SPARK_CONF_DIR/yarn-conf" ]; then
   export SPARK_DIST_CLASSPATH="$SPARK_DIST_CLASSPATH:$SPARK_CONF_DIR/yarn-conf"
 fi

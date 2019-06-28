@@ -6,7 +6,7 @@
     "plugins": [
         "alerts",
         "expandable-chapters-interactive",
-        "mathjax",
+        "katex",
         "toc",
         "-lunr",
         "-search",
