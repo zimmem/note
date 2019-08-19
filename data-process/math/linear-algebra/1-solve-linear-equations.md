@@ -13,17 +13,10 @@ $$
 
 上述两个方程的行图像如下：
 $$
-\begin{bmatrix}
-2, -1 \\
--1, 2 \\
-\end{bmatrix}
-\begin{bmatrix}
-x\\ y \\
-\end{bmatrix}
+\begin{bmatrix}2&-1 \\-1&2 \\\end{bmatrix}
+\begin{bmatrix}x\\ y \end{bmatrix}
 =
-\begin{bmatrix}
-0\\ 3 \\
-\end{bmatrix}
+\begin{bmatrix}0\\ 3 \\\end{bmatrix}
 $$
 可简写为：
 $$

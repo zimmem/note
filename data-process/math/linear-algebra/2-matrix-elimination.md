@@ -21,7 +21,8 @@ $$
         这里用矩阵简写方程组
 
     $$
-    \begin{bmatrix} \boxed{1}& 2& 1 \\ 3&8&1\\ 0& 4&1\\ \end{bmatrix} \stackrel{(2,1)}{\longrightarrow}
+    \begin{bmatrix} \boxed{1}& 2& 1 \\ 3&8&1\\ 0& 4&1\\ \end{bmatrix} 
+    \stackrel{(2,1)}{\longrightarrow}
     \begin{bmatrix}\boxed{1}& 2& 1\\0& \boxed{2}& -2\\0& 4& 1\\\end{bmatrix}
     \stackrel{(3,2)}{\longrightarrow}
     \begin{bmatrix}\boxed{1}& 2& 1 \\0&\boxed{2}& -2\\0& 0& \boxed{5}\\\end{bmatrix}

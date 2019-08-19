@@ -92,5 +92,9 @@ $$
 
 
 ```plot
-plot sin(1.6 ** x),1.6 ** x
+set width 300
+set height 300
+plot sin(1.6 ** x)
 ```
+
+https://katex.org/docs/supported.html#math-operators
