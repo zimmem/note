@@ -44,3 +44,47 @@ $$
 把 $R$ 写成以下形式：
 
 ![](images/2019-08-15-23-12-29.png)
+
+$$
+\begin{bmatrix}
+1(I)& 0(I) &  2(F) & -2(F)\\
+0(I)& 1(I) &  0(F) & 2(F)\\
+0& 0 & 0& 0
+\end{bmatrix}
+$$
+
+$I$ 所在列对应主列， $F$所在列对应自由列
+
+解是
+$$
+c\begin{bmatrix}-2 \\ 1 \\ 0 \\ 0\end{bmatrix}
++d\begin{bmatrix}2 \\ 0 \\ -2 \\ 1\end{bmatrix}
+$$
+
+上述两个向量， 一三行对应自由变量， 二四行对应主变量。
+
+$R$ 可简写为
+$$
+R=\begin{bmatrix}
+I& F \\ 0 & 0
+\end{bmatrix}
+$$
+
+$I$ 所在的行对应主行， 所在的列为主列， $F$ 所在的列为自由列。
+
+零空间矩阵（各列由特解组成）， 可表示为
+
+$N=\begin{bmatrix}-F \\ I\end{bmatrix}$, 因为 $RN=0$.
+
+如：
+$$
+A=\begin{bmatrix}1& 2 &3\\2& 4 &6\\2& 6 &8\\2& 8 &10\\\end{bmatrix}
+\stackrel{消元}{\rightarrow}
+\begin{bmatrix}1& 2 &3\\0& 0 &0\\0& 2 &2\\0& 4 &4\\\end{bmatrix}
+\stackrel{向上消元}{\rightarrow}
+\begin{bmatrix}1& 2 &3\\0& 2 &2\\0& 0 &0\\0& 0 &0\\\end{bmatrix}
+\stackrel{写成R形式}{\rightarrow}
+\begin{bmatrix}1& 0 &1\\0& 1 &1\\0& 0 &0\\0& 0 &0\\\end{bmatrix}=R  
+$$
+
+则特解为 $\begin{bmatrix}-1 \\ -1 \\ 1\end{bmatrix}$ （一二行对应$R$中的 $-F$， 第三行为 $I$）, 
